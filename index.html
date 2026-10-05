@@ -351,6 +351,7 @@ document.querySelectorAll('a[href="#pay"]').forEach(function(a){
   a.addEventListener("click", function(){ tr("InitiateCheckout"); });
 });
 document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
+document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
 
 function ok(b){
   tr("AddPaymentInfo");
