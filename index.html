@@ -145,6 +145,23 @@ footer{text-align:center;color:var(--mute);font-size:13.5px;padding:26px 18px 10
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1783713612490810');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -322,13 +339,21 @@ footer{text-align:center;color:var(--mute);font-size:13.5px;padding:26px 18px 10
 
 <script>
 var PRICE = 49, WA = "201552268432";
+var fired={};
+function tr(n){try{if(!window.fbq||fired[n])return;fired[n]=1;fbq("track",n,{value:PRICE,currency:"EGP",content_name:"خطة مذاكرة الثانوية العامة"})}catch(e){}}
+tr("ViewContent");
 document.querySelectorAll("[data-p]").forEach(function(e){ e.textContent = PRICE; });
 var msg = "السلام عليكم، حوّلت " + PRICE + " جنيه لخطة مذاكرة الثانوية العامة وده سكرين التحويل.";
 var waUrl = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
 document.getElementById("wa").href = waUrl;
 document.getElementById("waFloat").href = waUrl;
+document.querySelectorAll('a[href="#pay"]').forEach(function(a){
+  a.addEventListener("click", function(){ tr("InitiateCheckout"); });
+});
+document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
 
 function ok(b){
+  tr("AddPaymentInfo");
   var t = document.getElementById("t");
   t.classList.add("on");
   var old = b.textContent;
