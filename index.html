@@ -293,8 +293,11 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 
   <div class="box">
     <h3>⚡ انستا باي (InstaPay)</h3>
-    <div class="mute" style="font-size:15px">اكتب العنوان ده في انستا باي بالظبط:</div>
-    <div class="row"><div class="val">ahmedjomaa8432@instapay</div><button class="cp" data-c="ahmedjomaa8432@instapay">نسخ</button></div>
+    <a class="btn" id="ipn" href="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" target="_blank" rel="noopener noreferrer" style="margin-top:10px;font-size:17px">ادفع <span data-p>49</span> جنيه بإنستا باي</a>
+    <div class="row"><button class="cp" data-c="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" style="flex:1">نسخ الرابط</button></div>
+    <div class="mute" style="font-size:15px;margin-top:10px">أو امسح الكود ده من تطبيق إنستا باي:</div>
+    <div style="background:#fff;border-radius:14px;padding:14px;margin-top:8px;text-align:center"><img src="instapay-qr.jpg" alt="كود QR للدفع عبر إنستا باي" width="516" height="552" loading="lazy" style="width:220px;height:auto;max-width:100%;display:inline-block;border-radius:8px"></div>
+    <div class="mute" style="font-size:14px;margin-top:10px">بعد الدفع، صوّر شاشة التحويل وابعتها على واتساب. اتأكد إن الاسم اللي ظاهر هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b> قبل ما تأكد.</div>
   </div>
 
   <p class="payhint">💡 اضغط «نسخ» عشان تنسخ الرقم بدون أخطاء، وراجع إن الاسم اللي ظهرلك قبل التأكيد هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b>.</p>
@@ -352,14 +355,15 @@ document.querySelectorAll('a[href="#pay"]').forEach(function(a){
 });
 document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
+document.getElementById("ipn").addEventListener("click", function(){ tr("AddPaymentInfo"); });
 
 function ok(b){
   tr("AddPaymentInfo");
+  if(!b.dataset.t)b.dataset.t=b.textContent;
   var t = document.getElementById("t");
   t.classList.add("on");
-  var old = b.textContent;
   b.textContent = "تم ✓"; b.classList.add("ok");
-  setTimeout(function(){ t.classList.remove("on"); b.textContent = "نسخ"; b.classList.remove("ok"); }, 1800);
+  setTimeout(function(){ t.classList.remove("on"); b.textContent = b.dataset.t; b.classList.remove("ok"); }, 1800);
 }
 function fb(txt){
   var a = document.createElement("textarea");
