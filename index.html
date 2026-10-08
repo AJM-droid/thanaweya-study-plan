@@ -73,6 +73,16 @@ section{padding:40px 0}
 .mock-grid div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:12.5px;font-weight:700;color:#334743;text-align:center}
 .note{background:#fff2a8;color:#3b3400;border-radius:8px;padding:12px 16px;transform:rotate(-1.2deg);box-shadow:0 8px 18px rgba(0,0,0,.12);font-weight:700;margin:20px auto 0;max-width:440px;font-size:15.5px}
 
+/* reviews */
+.reviews-sec{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;gap:14px;margin-top:18px;grid-template-columns:1fr}
+@media(min-width:700px){.rev-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.rev-grid{grid-template-columns:1fr 1fr 1fr}}
+.rev-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--shadow-sm)}
+.rev-card a{display:block;border-radius:10px;overflow:hidden}
+.rev-card img{width:100%;max-width:360px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
+.rev-note{text-align:center;color:var(--mute);font-size:13.5px;margin-top:14px}
+
 /* checklists */
 .chk{list-style:none;padding:0;margin:6px 0 0}
 .chk li{position:relative;padding:13px 46px 13px 0;border-bottom:1px solid var(--line);font-size:16.5px}
@@ -209,6 +219,16 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 
   <div class="note">تذكّر: كل يوم صغير بتميّز فيه صح… هيوصّلك لنتيجة كبيرة.</div>
 </header>
+
+<section class="reviews-sec reveal"><div class="w">
+  <h2 style="text-align:center">آراء الناس اللي جرّبوا الخطة</h2>
+  <div class="rev-grid">
+    <div class="rev-card"><a href="review-1.jpg.jpeg" target="_blank" rel="noopener"><img src="review-1.jpg.jpeg" alt="رسالة من مشتري الخطة: الكتاب جميل جدًا وساعده ينجز حاجات كتير ويحسّن الإنتاجية في المذاكرة" width="720" height="295" loading="lazy"></a></div>
+    <div class="rev-card"><a href="review-2.jpg.jpeg" target="_blank" rel="noopener"><img src="review-2.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة كويسة وساعدته يوفّر وقته ويعرف يذاكر إيه كل يوم" width="1013" height="493" loading="lazy"></a></div>
+    <div class="rev-card"><a href="review-3.jpg.jpeg" target="_blank" rel="noopener"><img src="review-3.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة ساعدته ينظّم وقته بعد ما كان متلخبط" width="889" height="342" loading="lazy"></a></div>
+  </div>
+  <p class="rev-note">آراء حقيقية من مستخدمين، نُشرت بموافقتهم.</p>
+</div></section>
 
 <section class="w reveal">
   <h2>هتعرف في الخطة دي:</h2>
