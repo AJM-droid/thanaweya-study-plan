@@ -97,6 +97,16 @@ section{padding:40px 0}
 .rev-card img{width:100%;max-width:360px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
 .rev-note{text-align:center;color:var(--mute);font-size:13.5px;margin-top:14px}
 
+/* product preview */
+.pv-grid{display:grid;gap:14px;margin-top:18px;grid-template-columns:1fr}
+@media(min-width:700px){.pv-grid{grid-template-columns:1fr 1fr}}
+.pv-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--shadow-sm)}
+.pv-card a{display:block;border-radius:10px;overflow:hidden;background:#fff}
+.pv-card img{width:100%;max-width:420px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
+.pv-cap{font-size:15.5px;margin:10px 4px 2px}
+.pv-cap b{display:block;font-size:16.5px}
+.pv-cap span{color:var(--mute);font-size:14.5px}
+
 /* offer */
 .offer{background:var(--card);border:3px solid var(--teal);border-radius:22px;padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
 .offer-list{list-style:none;padding:0;margin:14px 0;text-align:right}
@@ -182,7 +192,7 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
   <a class="btn" href="#pay">عايز الخطة — <span data-p>49</span> جنيه</a>
   <p class="under-cta">الدفع بالمحافظ الإلكترونية أو InstaPay • الاستلام على واتساب</p>
-  <a class="secondary" href="#system">بص جوه الخطة ↓</a>
+  <a class="secondary" href="#preview">بص جوه الخطة ↓</a>
 </header>
 
 <section class="w reveal">
@@ -202,7 +212,7 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 <section class="w reveal">
   <div class="big-idea">
     <h2>مش محتاج ساعات أكتر. محتاج نظام أوضح.</h2>
-    <p>ساعة مذاكرة واحدة بخطة واضحة وهدف واضح ومراجعة محسوبة، أحسن من 3 ساعات قاعد قدام الكتاب وخلاص. النظام ده معمول عشان كل جلسة مذاكرة يبقى ليها معنى.</p>
+    <p>مش كل ساعة مذاكرة بتساوي نفس النتيجة. لما تدخل الجلسة بهدف واضح، وتعرف هتعمل إيه، وتراجع أخطاءك، وقتك بيبقى له قيمة أكبر. النظام ده معمول عشان كل جلسة مذاكرة يبقى ليها معنى.</p>
   </div>
 </section>
 
@@ -220,6 +230,25 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   <p class="sys-flow">↓ خطوة واحدة بتسلّم للي بعدها ↓</p>
 </section>
 
+<section class="w reveal" id="preview">
+  <h2>بص جوه الخطة</h2>
+  <p class="mute">دي مش مجرد فكرة بنشرحها لك. دي الصفحات اللي هتستخدمها فعلًا عشان تنظم مذاكرتك وتتابع تقدمك — من الملف نفسه، من غير تجميل.</p>
+  <div class="pv-grid">
+    <div class="pv-card"><a href="preview-1-know-your-position.jpg" target="_blank" rel="noopener"><img src="preview-1-know-your-position.jpg" alt="صفحة اعرف موقفك: جدول تقييم المواد ومستواك في كل مادة" width="640" height="896" loading="lazy"></a><p class="pv-cap"><b>1 — اعرف موقفك</b><span>حدد أنت واقف فين قبل ما تبني خطتك.</span></p></div>
+    <div class="pv-card"><a href="preview-2-focused-session.jpeg" target="_blank" rel="noopener"><img src="preview-2-focused-session.jpeg" alt="صفحة جلسة المذاكرة المركزة: الهدف والمدة وتقييم الجلسة" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>2 — جلسة مذاكرة مركزة</b><span>ادخل كل جلسة وأنت عارف المطلوب منك.</span></p></div>
+    <div class="pv-card"><a href="preview-3-mistakes-log.jpeg" target="_blank" rel="noopener"><img src="preview-3-mistakes-log.jpeg" alt="صفحة سجل الأخطاء: سبب كل غلطة وخطة إصلاحها ومواعيد مراجعتها" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>3 — سجل الأخطاء</b><span>اعرف أخطاءك المتكررة بدل ما تكررها.</span></p></div>
+    <div class="pv-card"><a href="preview-4-smart-review.jpeg" target="_blank" rel="noopener"><img src="preview-4-smart-review.jpeg" alt="صفحة المراجعة الذكية: جدول مواعيد المراجعة لكل موضوع" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>4 — المراجعة الذكية</b><span>نظم مراجعتك بدل ما تعتمد على إنك تفتكر لوحدك.</span></p></div>
+  </div>
+  <p class="mute" style="margin-top:12px;font-size:14.5px">دوس على أي صفحة عشان تشوفها بحجمها الكامل.</p>
+</section>
+
+<section class="w reveal">
+  <h2>بدل ما… هتعرف</h2>
+  <div class="ba"><p class="before">بدل ما تقول: <b>«أذاكر إيه النهارده؟»</b></p><p class="after">هتعرف: <b>المطلوب مني النهارده هو…</b> مكتوب في خطتك.</p></div>
+  <div class="ba"><p class="before">بدل: <b>«أنا بكرر نفس الغلط.»</b></p><p class="after">هتعرف: <b>إيه الغلط اللي بيتكرر وليه،</b> من سجل أخطاءك.</p></div>
+  <div class="ba"><p class="before">بدل: <b>«أنا ذاكرت كتير… بس مش عارف أنا فين.»</b></p><p class="after">هتعرف: <b>أنا وصلت لفين وإيه اللي محتاج يتظبط،</b> من مراجعتك الأسبوعية.</p></div>
+</section>
+
 <section class="alt"><div class="w reveal">
   <h2>جوه الخطة هتلاقي إيه؟</h2>
   <ul class="chk">
@@ -233,13 +262,6 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   </ul>
   <p class="mute" style="margin-top:12px">27 صفحة، كلها معمولة عشان تتطبع وتتملّي بإيدك.</p>
 </div></section>
-
-<section class="w reveal">
-  <h2>بدل ما… هتعرف</h2>
-  <div class="ba"><p class="before">بدل ما تقول: <b>«أذاكر إيه النهارده؟»</b></p><p class="after">هتعرف: <b>المطلوب مني النهارده هو…</b> مكتوب في خطتك.</p></div>
-  <div class="ba"><p class="before">بدل: <b>«أنا بكرر نفس الغلط.»</b></p><p class="after">هتعرف: <b>إيه الغلط اللي بيتكرر وليه،</b> من سجل أخطاءك.</p></div>
-  <div class="ba"><p class="before">بدل: <b>«أنا ذاكرت كتير… بس مش عارف أنا فين.»</b></p><p class="after">هتعرف: <b>أنا وصلت لفين وإيه اللي محتاج يتظبط،</b> من مراجعتك الأسبوعية.</p></div>
-</section>
 
 <section class="reviews-sec reveal"><div class="w">
   <h2 style="text-align:center">ناس جرّبت الخطة قالت إيه؟</h2>
@@ -274,9 +296,10 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </section>
 
 <section class="alt" id="pay"><div class="w reveal">
-  <h2>هتطلبها إزاي؟ 3 خطوات بس</h2>
+  <h2>هتطلبها إزاي؟ 4 خطوات بس</h2>
   <ol class="pay-steps">
     <li><b>حوّل <span data-p>49</span> جنيه</b> على إنستا باي (الأسرع: بضغطة واحدة) أو على أي محفظة من اللي تحت.</li>
+    <li><b>اتأكد إن الاسم الظاهر لك هو Ahmed Gomaa</b> والمبلغ <span data-p>49</span> جنيه قبل ما تأكد.</li>
     <li><b>ابعت سكرين التحويل</b> على واتساب <b dir="ltr">+20 150 045 5750</b>.</li>
     <li><b>استلم الخطة</b> ملف PDF على واتساب بعد ما نتأكد من التحويل.</li>
   </ol>
@@ -300,16 +323,17 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 
   <p class="payhint">💡 قبل ما تأكد التحويل، اتأكد إن الاسم الظاهر لك هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b>. الدفع عن طريق المحافظ الإلكترونية أو InstaPay.</p>
   <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 بعت سكرين التحويل على واتساب<small>هيتفتح واتساب على رقم +20 150 045 5750 برسالة جاهزة</small></a>
+  <div class="truth" style="margin-top:14px">🛡️ <b>لو الملف ما وصلكش أو حصلت مشكلة في فتحه،</b> تواصل معانا على واتساب وهنساعدك.</div>
 </div></section>
 
 <section class="w reveal">
   <h2>عندك سؤال؟</h2>
-  <details open><summary>هل الخطة كتاب شرح؟</summary><p>لأ. دي مش شرح للمنهج، دي نظام عملي بتملاه وتستخدمه: تخطط، تذاكر، تحل، تسجّل أخطاءك، وتراجع. بتشتغل مع أي مدرس وأي كتاب.</p></details>
-  <details><summary>هل الخطة مناسبة لكل مواد الثانوية؟</summary><p>أيوه. النظام معمول عشان تنظّم بيه أي مادة: بتقيّم مستواك فيها، تحط خطتها، وتتابعها أسبوع بأسبوع.</p></details>
-  <details><summary>هل أقدر أطبعها؟</summary><p>أيوه، وده الأفضل. الصفحات معمولة عشان تتطبع وتتملّي بإيدك. ولو مش هتطبع، تقدر تنقل الجداول على كراسة.</p></details>
-  <details><summary>هتوصلي إزاي؟</summary><p>بعد ما تحول <span data-p>49</span> جنيه وتبعت سكرين التحويل على واتساب <b dir="ltr">+20 150 045 5750</b>، هنبعتلك ملف الـ PDF على نفس الرقم بعد التأكيد.</p></details>
-  <details><summary>هدفع كام؟</summary><p>سعر الإطلاق <span data-p>49</span> جنيه، دفعة واحدة.</p></details>
-  <details><summary>هل فيه اشتراك؟</summary><p>لأ. بتدفع مرة واحدة والملف بيبقى معاك.</p></details>
+  <details open><summary>هل الخطة كتاب شرح؟</summary><p>لأ. دي مش كتاب شرح للمواد. دي نظام عملي يساعدك تنظم مذاكرتك، تخطط، تتابع، تحل، تحلل أخطاءك وتراجع.</p></details>
+  <details><summary>هل الخطة مناسبة لكل مواد الثانوية؟</summary><p>أيوه. الخطة مش مرتبطة بمادة معينة، فممكن تستخدمها مع كل موادك.</p></details>
+  <details><summary>هل أقدر أطبعها؟</summary><p>أيوه. الصفحات معمولة بحيث تقدر تطبعها وتكتب فيها بإيدك.</p></details>
+  <details><summary>هتوصلي إزاي؟</summary><p>بعد تأكيد الدفع، هنبعتلك الخطة على واتساب.</p></details>
+  <details><summary>هدفع كام؟</summary><p><span data-p>49</span> جنيه فقط، مرة واحدة.</p></details>
+  <details><summary>هل فيه اشتراك؟</summary><p>لأ. مفيش اشتراك شهري أو رسوم إضافية.</p></details>
 </section>
 
 <section class="w reveal" style="text-align:center">
