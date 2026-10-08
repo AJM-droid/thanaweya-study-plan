@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>خطة مذاكرة الثانوية العامة | Bondly Club — بـ 49 جنيه بس</title>
-<meta name="description" content="ملف عملي 27 صفحة ينظم مذاكرتك أسبوع بأسبوع: خطة، تركيز، حل أسئلة، سجل أخطاء، ومراجعة ذكية. اطلب بـ 49 جنيه واستلم على واتساب.">
-<meta property="og:title" content="خطة مذاكرة الثانوية العامة — Bondly Club">
-<meta property="og:description" content="بطل مذاكرة عشوائية. نظام عملي 27 صفحة بـ 49 جنيه. ادفع فودافون كاش / انستا باي وابعت السكرين واتساب.">
+<title>مشكلتك مش إنك مش بتذاكر… مشكلتك إنك مش بتذاكر بنظام | Bondly Club</title>
+<meta name="description" content="خطة مذاكرة عملية لطالب الثانوية العامة: تعرف تذاكر إيه وإمتى وإزاي، وتتابع تقدمك بدل ما كل يوم تبدأ من الصفر. 27 صفحة قابلة للطباعة بـ 49 جنيه، والاستلام على واتساب.">
+<meta property="og:title" content="مشكلتك مش إنك مش بتذاكر… مشكلتك إنك مش بتذاكر بنظام">
+<meta property="og:description" content="نظام مذاكرة عملي للثانوية العامة: خطة أسبوعية، جلسات تركيز، سجل أخطاء، مراجعة ذكية. 49 جنيه، والدفع بالمحافظ أو InstaPay والاستلام واتساب.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e6b5c'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>B</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,15 +16,14 @@
 :root{
   --bg:#f4f7f6; --card:#ffffff; --ink:#10201c; --mute:#5b6f6a;
   --teal:#0e6b5c; --teal-dark:#0a4f44; --teal-light:#e2f1ec;
-  --gold:#f5b301; --gold-soft:#fff6d9;
-  --line:#dbe7e2; --red:#c4271b; --wa:#1faa55; --wa-dark:#158a43;
+  --line:#dbe7e2; --red:#c4271b; --wa:#1faa55;
   --r:18px; --shadow:0 10px 30px rgba(16,60,52,.10); --shadow-sm:0 4px 14px rgba(16,60,52,.08);
   --max:720px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.85 Cairo,Tahoma,Arial,sans-serif;padding-bottom:86px;-webkit-font-smoothing:antialiased}
-h1,h2,h3{margin:0;line-height:1.45;font-weight:900}
+h1,h2,h3{margin:0;line-height:1.5;font-weight:900}
 h1{font-size:clamp(27px,7vw,40px);letter-spacing:-.3px}
 h2{font-size:clamp(22px,5.6vw,29px);margin-bottom:14px}
 p{margin:0 0 12px}
@@ -33,45 +32,60 @@ section{padding:40px 0}
 .mute{color:var(--mute)}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
 
-/* top urgent bar */
+/* top bar + header */
 .topbar{background:linear-gradient(90deg,#0a4f44,#0e6b5c);color:#fff;text-align:center;font-weight:800;font-size:15.5px;padding:10px 14px}
-.topbar b{background:var(--gold);color:#3a2d00;padding:1px 10px;border-radius:99px;margin:0 4px;white-space:nowrap}
-
-/* sticky header */
-.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar b{background:#fff;color:#0a4f44;padding:1px 12px;border-radius:99px;margin:0 4px;white-space:nowrap}
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .hdr-in{max-width:var(--max);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{font-weight:900;font-size:19px;color:var(--teal)}
 .logo small{display:block;font-size:11.5px;font-weight:700;color:var(--mute);line-height:1.2}
 .hdr-price{font-weight:900;color:var(--teal);font-size:18px;white-space:nowrap}
-.hdr-price s{color:var(--mute);font-weight:600;font-size:14px;margin-inline-start:6px}
 .hdr-cta{background:var(--teal);color:#fff;text-decoration:none;font-weight:800;padding:10px 20px;border-radius:12px;font-size:15.5px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
 .hdr-cta:active{transform:translateY(2px);box-shadow:none}
 
 /* hero */
-.hero{padding-top:28px;text-align:center}
+.hero{padding-top:30px;text-align:center}
 .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:6px 16px;font-size:14px;font-weight:800;color:var(--teal);box-shadow:var(--shadow-sm)}
 .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 5px rgba(31,170,85,.18)}
 .hero h1{margin:16px 0 10px}
 .hero h1 .hl{color:var(--teal);background:linear-gradient(transparent 62%,#cde9df 62%);padding:0 4px}
-.sub{color:var(--mute);font-size:18px;margin:0 auto 18px;max-width:560px}
-.price-pill{display:inline-flex;align-items:baseline;gap:8px;background:var(--card);border:2px dashed var(--teal);border-radius:16px;padding:8px 20px;margin-bottom:16px;box-shadow:var(--shadow-sm)}
-.price-pill .now{font-size:38px;font-weight:900;color:var(--teal);line-height:1}
-.price-pill .cur{font-weight:800;color:var(--teal)}
-.price-pill s{color:var(--mute);font-size:17px}
-.price-pill .off{background:var(--red);color:#fff;font-size:13px;font-weight:800;border-radius:99px;padding:2px 10px}
+.sub{color:var(--mute);font-size:18px;margin:0 auto 14px;max-width:560px}
+.format{font-weight:800;font-size:16px;margin-bottom:14px}
+.price-big{font-size:64px;font-weight:900;color:var(--teal);line-height:1.1}
+.price-big small{font-size:22px;font-weight:800}
+.price-tag{font-weight:800;color:var(--mute);margin-bottom:16px}
 .btn{display:block;width:100%;background:var(--teal);color:#fff;border:0;border-radius:15px;padding:16px;font:900 19px Cairo,sans-serif;text-align:center;text-decoration:none;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .08s}
 .btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
-.btn small{display:block;font-size:13.5px;font-weight:600;opacity:.9}
-.trust{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 0;padding:0;list-style:none}
-.trust li{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#334743}
-.mock{margin:22px auto 0;max-width:520px;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;text-align:right}
-.mock-top{background:linear-gradient(135deg,#0e6b5c,#14987f);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
-.mock-top .pdf{width:52px;height:64px;background:#fff;border-radius:8px;display:grid;place-items:center;color:var(--teal);font-weight:900;font-size:13px;flex-shrink:0;transform:rotate(-4deg);box-shadow:0 6px 14px rgba(0,0,0,.25)}
-.mock-top b{display:block;font-size:17px}
-.mock-top span{font-size:13.5px;opacity:.9}
-.mock-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:16px}
-.mock-grid div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:12.5px;font-weight:700;color:#334743;text-align:center}
-.note{background:#fff2a8;color:#3b3400;border-radius:8px;padding:12px 16px;transform:rotate(-1.2deg);box-shadow:0 8px 18px rgba(0,0,0,.12);font-weight:700;margin:20px auto 0;max-width:440px;font-size:15.5px}
+.under-cta{font-size:14.5px;color:var(--mute);margin-top:12px}
+.secondary{display:inline-block;margin-top:10px;font-weight:800;color:var(--teal);text-decoration:underline;text-underline-offset:4px;font-size:16px}
+
+/* checklists */
+.chk{list-style:none;padding:0;margin:6px 0 0}
+.chk li{position:relative;padding:13px 46px 13px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.chk li:last-child{border-bottom:0}
+.chk li::before{content:"✓";position:absolute;right:0;top:12px;width:31px;height:31px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
+.chk.x li::before{content:"✕";background:var(--red)}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.truth{background:var(--teal-light);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:16px;font-size:16.5px}
+.truth b{color:var(--teal-dark)}
+.big-idea{background:var(--teal);color:#fff;border-radius:18px;padding:22px 20px;text-align:center;box-shadow:var(--shadow);margin-top:6px}
+.big-idea h2{margin-bottom:8px}
+.big-idea p{margin:0;opacity:.92;font-size:16.5px}
+
+/* system steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0}
+.steps li{counter-increment:s;position:relative;padding:8px 56px 18px 0;font-size:16.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding-left:14px;box-shadow:var(--shadow-sm)}
+.steps li::before{content:counter(s,decimal);position:absolute;right:12px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
+.steps li b{display:block;font-size:17px}
+.steps li span{color:var(--mute);font-size:15px}
+.sys-flow{text-align:center;font-weight:800;color:var(--teal);margin:4px 0 0;font-size:15px}
+
+/* before-after */
+.ba{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;box-shadow:var(--shadow-sm)}
+.ba .before{color:var(--mute);font-size:15.5px}
+.ba .before b{color:var(--red)}
+.ba .after{font-size:16.5px;margin-top:6px}
+.ba .after b{color:var(--teal-dark)}
 
 /* reviews */
 .reviews-sec{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -83,56 +97,31 @@ section{padding:40px 0}
 .rev-card img{width:100%;max-width:360px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
 .rev-note{text-align:center;color:var(--mute);font-size:13.5px;margin-top:14px}
 
-/* checklists */
-.chk{list-style:none;padding:0;margin:6px 0 0}
-.chk li{position:relative;padding:13px 46px 13px 0;border-bottom:1px solid var(--line);font-size:16.5px}
-.chk li:last-child{border-bottom:0}
-.chk li::before{content:"✓";position:absolute;right:0;top:12px;width:31px;height:31px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
-.chk.x li::before{content:"✕";background:var(--red)}
-.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.truth{background:var(--teal-light);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:16px;font-size:16px}
-.truth b{color:var(--teal-dark)}
-
-/* cards grid */
-.grid{display:grid;gap:12px;margin-top:16px}
-@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
-.pg{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;border-inline-start:6px solid var(--teal);box-shadow:var(--shadow-sm)}
-.pg b{display:block;font-weight:900;color:var(--teal-dark);font-size:16.5px;margin-bottom:2px}
-.pg span{color:var(--mute);font-size:15px;line-height:1.7;display:block}
-.pg .n{font-size:12px;font-weight:800;color:var(--teal);opacity:.7}
-
 /* offer */
-.offer{background:var(--card);border:3px solid var(--teal);border-radius:22px;padding:24px 20px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.offer::before{content:"خصم 90%";position:absolute;top:16px;left:-38px;transform:rotate(-38deg);background:var(--red);color:#fff;font-weight:900;font-size:14px;padding:5px 42px}
-.offer h2{margin-bottom:4px}
-.stack{width:100%;border-collapse:collapse;text-align:right;margin:14px 0 6px;font-size:16px}
-.stack td{padding:10px 4px;border-bottom:1px dashed var(--line)}
-.stack td:last-child{text-align:left;white-space:nowrap;text-decoration:line-through;color:var(--mute)}
-.was{color:var(--mute);font-size:17px}
-.was b{text-decoration:line-through}
-.price{font-size:70px;font-weight:900;color:var(--teal);line-height:1.05;margin:4px 0}
-.price small{font-size:22px;font-weight:800}
-.save{display:inline-block;background:var(--gold-soft);border:1.5px solid #ead27a;color:#5a4300;font-weight:800;border-radius:99px;padding:4px 16px;font-size:14.5px;margin-bottom:6px}
-.warn{color:var(--red);font-weight:800;font-size:15px;margin-top:12px}
-.secure{font-size:13.5px;color:var(--mute);margin-top:8px}
+.offer{background:var(--card);border:3px solid var(--teal);border-radius:22px;padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
+.offer-list{list-style:none;padding:0;margin:14px 0;text-align:right}
+.offer-list li{padding:9px 40px 9px 0;position:relative;border-bottom:1px dashed var(--line);font-size:16px}
+.offer-list li:last-child{border-bottom:0}
+.offer-list li::before{content:"✓";position:absolute;right:4px;top:9px;width:26px;height:26px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-weight:900}
+.one-time{font-size:14px;color:var(--mute);margin-top:10px}
 
-/* steps + pay */
-.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0}
-.steps li{counter-increment:s;position:relative;padding:8px 56px 16px 0;font-size:16.5px}
-.steps li::before{content:counter(s);position:absolute;right:0;top:6px;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+/* payment */
+.pay-steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0}
+.pay-steps li{counter-increment:s;position:relative;padding:8px 56px 16px 0;font-size:16.5px}
+.pay-steps li::before{content:counter(s);position:absolute;right:0;top:6px;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
 .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0;box-shadow:var(--shadow-sm)}
 .box h3{font-size:17px;margin-bottom:4px}
+.tag{display:inline-block;background:var(--teal-light);color:var(--teal-dark);font-size:13px;font-weight:800;border-radius:99px;padding:2px 12px;margin-bottom:6px}
 .row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
 .val{flex:1;min-width:190px;direction:ltr;text-align:left;background:#eef6f2;border:2px dashed var(--teal);border-radius:12px;padding:11px 14px;font:800 18px/1.3 ui-monospace,Menlo,Consolas,monospace;user-select:all;word-break:break-all;color:#0a3d34}
 .cp{background:var(--teal);color:#fff;border:0;border-radius:11px;padding:12px 20px;font:800 15.5px Cairo,sans-serif;cursor:pointer;min-width:88px}
 .cp.ok{background:var(--wa)}
 .wa{background:var(--wa);box-shadow:0 6px 0 rgba(0,0,0,.2)}
 .wa:active{box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.wa small{display:block;font-size:13px;font-weight:600;opacity:.92}
 .payhint{font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
 
-/* guarantee + faq */
-.guar{border:2px solid var(--teal);border-radius:18px;padding:20px;background:var(--card);box-shadow:var(--shadow-sm);display:flex;gap:14px;align-items:flex-start}
-.guar .sh{width:52px;height:52px;flex-shrink:0;border-radius:50%;background:var(--teal-light);display:grid;place-items:center;font-size:26px}
+/* faq */
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
 summary{font-weight:800;cursor:pointer;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
 summary::-webkit-details-marker{display:none}
@@ -144,9 +133,7 @@ footer{text-align:center;color:var(--mute);font-size:13.5px;padding:26px 18px 10
 /* sticky bar + float + toast */
 .bar{position:fixed;inset-inline:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
 .bar .btn{width:auto;flex:1;max-width:430px;padding:12px;font-size:17px}
-.bar-price{text-align:center;line-height:1.2}
-.bar-price b{font-size:23px;color:var(--teal);display:block}
-.bar-price s{font-size:13.5px;color:var(--mute)}
+.bar-price{text-align:center;line-height:1.2;font-weight:900;font-size:16px;color:var(--teal);white-space:nowrap}
 .float-wa{position:fixed;bottom:86px;left:14px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 22px rgba(31,170,85,.45);font-size:28px}
 #t{position:fixed;top:14px;inset-inline:0;margin:auto;width:max-content;max-width:92%;background:#111;color:#fff;padding:11px 22px;border-radius:30px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;z-index:99;font-size:15px}
 #t.on{opacity:1}
@@ -175,53 +162,87 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="topbar">📢 عرض الإطلاق لطلاب الثانوية العامة — <b>49 جنيه بدل 500</b> لفترة محدودة</div>
+<div class="topbar">عرض الإطلاق لطلاب الثانوية العامة — <b><span data-p>49</span> جنيه</b></div>
 
 <div class="hdr">
   <div class="hdr-in">
     <div class="logo">Bondly Club<small>خطة مذاكرة الثانوية العامة</small></div>
     <div style="display:flex;align-items:center;gap:12px">
-      <div class="hdr-price">49 ج <s>500 ج</s></div>
-      <a class="hdr-cta" href="#pay">اطلب الآن</a>
+      <div class="hdr-price"><span data-p>49</span> ج</div>
+      <a class="hdr-cta" href="#pay">عايز الخطة</a>
     </div>
   </div>
 </div>
 
 <header class="hero w">
-  <span class="badge"><span class="dot"></span> ملف PDF عملي • 27 صفحة • بتملاه بإيدك</span>
-  <h1>أخيرًا… خطة مذاكرة واضحة تعرف بيها <span class="hl">تذاكر إيه، إمتى، وإزاي</span> من غير حيرة ولا تأجيل</h1>
-  <p class="sub">نظام عملي بيمشي معاك أسبوع بأسبوع لحد الامتحان: بيحوّلك من «قاعد أذاكر» لـ «أنا فعلًا بنجز».</p>
-
-  <div class="price-pill"> <span class="off">وفّر 451 ج</span> <span class="now"><span data-p>49</span></span> <span class="cur">جنيه بس</span> <s>500 جنيه</s></div>
-
-  <a class="btn" href="#pay">أنا عايز الخطة دلوقتي — <span data-p>49</span> جنيه بس<small>ادفع فودافون كاش أو انستا باي • واستلم على واتساب</small></a>
-
-  <ul class="trust">
-    <li>⚡ استلام سريع على واتساب</li>
-    <li>📱 دفع فودافون كاش / انستا باي</li>
-    <li>🖨️ اطبع واشتغل بإيدك</li>
-  </ul>
-
-  <div class="mock">
-    <div class="mock-top">
-      <div class="pdf">PDF<br>27</div>
-      <div><b>خطة مذاكرة الثانوية العامة</b><span>خطة أسبوعية + سجل أخطاء + مراجعة ذكية + متابعة 9 أسابيع</span></div>
-    </div>
-    <div class="mock-grid">
-      <div>📊 تقييم المواد</div>
-      <div>🗓️ خطة الأسبوع</div>
-      <div>🎯 جلسة تركيز</div>
-      <div>📝 سجل الأخطاء</div>
-      <div>🔁 المراجعة الذكية</div>
-      <div>📈 متابعة 9 أسابيع</div>
-    </div>
-  </div>
-
-  <div class="note">تذكّر: كل يوم صغير بتميّز فيه صح… هيوصّلك لنتيجة كبيرة.</div>
+  <span class="badge"><span class="dot"></span> نظام مذاكرة عملي — مش مجرد ملف</span>
+  <h1>مشكلتك مش إنك مش بتذاكر… <span class="hl">مشكلتك إنك مش بتذاكر بنظام.</span></h1>
+  <p class="sub">خطة مذاكرة عملية لطالب الثانوية العامة: تعرف تذاكر إيه وإمتى وإزاي، وتحل أسئلة، وتصلّح أخطاءك، وتراجع في الوقت الصح — بدل ما كل يوم تبدأ من الصفر.</p>
+  <p class="format">📄 27 صفحة عملية — اطبعها واكتب فيها بإيدك</p>
+  <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
+  <a class="btn" href="#pay">عايز الخطة — <span data-p>49</span> جنيه</a>
+  <p class="under-cta">الدفع بالمحافظ الإلكترونية أو InstaPay • الاستلام على واتساب</p>
+  <a class="secondary" href="#system">بص جوه الخطة ↓</a>
 </header>
 
+<section class="w reveal">
+  <h2>بتحصل معاك الحاجات دي؟</h2>
+  <ul class="chk x">
+    <li>بتفتح الكتاب ومش عارف تبدأ منين.</li>
+    <li>بتضيع وقت قبل ما تبدأ أصلًا.</li>
+    <li>تذاكر النهارده وبعد كام يوم تحس إنك نسيت.</li>
+    <li>تحل كتير لكن تكرر نفس الغلط.</li>
+    <li>تعمل جدول حلو وتسيبه بعد كام يوم.</li>
+    <li>اليوم يخلص ومش عارف أنجزت إيه فعلًا.</li>
+    <li>الموبايل والتشتت بياكلوا جزء كبير من وقتك.</li>
+  </ul>
+  <div class="truth"><b>المشكلة مش بالضرورة إنك كسلان.</b><br>المشكلة إنك محتاج نظام واضح تمشي عليه.</div>
+</section>
+
+<section class="w reveal">
+  <div class="big-idea">
+    <h2>مش محتاج ساعات أكتر. محتاج نظام أوضح.</h2>
+    <p>ساعة مذاكرة واحدة بخطة واضحة وهدف واضح ومراجعة محسوبة، أحسن من 3 ساعات قاعد قدام الكتاب وخلاص. النظام ده معمول عشان كل جلسة مذاكرة يبقى ليها معنى.</p>
+  </div>
+</section>
+
+<section class="w reveal" id="system">
+  <h2>الخطة بتمشي معاك خطوة بخطوة</h2>
+  <p class="mute">مش شوية ورق متفرق. ده نظام واحد: كل خطوة بتسلّم للي بعدها.</p>
+  <ol class="steps">
+    <li><b>01 — اعرف موقفك</b><span>قيّم كل مادة، واعرف أنت قوي في إيه وإيه محتاج شغل أكتر.</span></li>
+    <li><b>02 — ابنِ خطتك</b><span>حوّل المطلوب منك لخطة أسبوعية واقعية تقدر تنفذها.</span></li>
+    <li><b>03 — ذاكر بتركيز</b><span>ادخل جلسة المذاكرة وأنت عارف هدفك بدل ما تقعد قدام الكتاب وخلاص. (النظام ماشي بجلسات 45 دقيقة + راحة).</span></li>
+    <li><b>04 — حل وحلل أخطاءك</b><span>مش بس تعرف إن الإجابة غلط؛ تعرف الغلط حصل ليه وإيه اللي محتاج يتراجع.</span></li>
+    <li><b>05 — راجع في الوقت الصح</b><span>استخدم جدول مراجعة يساعدك ترجع للمعلومات قبل ما تختفي من ذاكرتك.</span></li>
+    <li><b>06 — تابع وعدّل</b><span>كل أسبوع شوف أنت وصلت لفين وعدّل خطتك بناءً على الواقع.</span></li>
+  </ol>
+  <p class="sys-flow">↓ خطوة واحدة بتسلّم للي بعدها ↓</p>
+</section>
+
+<section class="alt"><div class="w reveal">
+  <h2>جوه الخطة هتلاقي إيه؟</h2>
+  <ul class="chk">
+    <li>تقييم موادك عشان تعرف تبدأ منين.</li>
+    <li>خطة أسبوعية وخطة يومية جاهزة تملاها.</li>
+    <li>ورقة جلسة المذاكرة: هدف الجلسة ومدتها والنتيجة.</li>
+    <li>متابعة حل الأسئلة أول بأول.</li>
+    <li>سجل أخطاء بيقولك الغلط بيتكرر فين وليه.</li>
+    <li>جدول المراجعة الذكية بمواعيد محددة.</li>
+    <li>مراجعة أسبوعية بالأرقام لحد 9 أسابيع.</li>
+  </ul>
+  <p class="mute" style="margin-top:12px">27 صفحة، كلها معمولة عشان تتطبع وتتملّي بإيدك.</p>
+</div></section>
+
+<section class="w reveal">
+  <h2>بدل ما… هتعرف</h2>
+  <div class="ba"><p class="before">بدل ما تقول: <b>«أذاكر إيه النهارده؟»</b></p><p class="after">هتعرف: <b>المطلوب مني النهارده هو…</b> مكتوب في خطتك.</p></div>
+  <div class="ba"><p class="before">بدل: <b>«أنا بكرر نفس الغلط.»</b></p><p class="after">هتعرف: <b>إيه الغلط اللي بيتكرر وليه،</b> من سجل أخطاءك.</p></div>
+  <div class="ba"><p class="before">بدل: <b>«أنا ذاكرت كتير… بس مش عارف أنا فين.»</b></p><p class="after">هتعرف: <b>أنا وصلت لفين وإيه اللي محتاج يتظبط،</b> من مراجعتك الأسبوعية.</p></div>
+</section>
+
 <section class="reviews-sec reveal"><div class="w">
-  <h2 style="text-align:center">آراء الناس اللي جرّبوا الخطة</h2>
+  <h2 style="text-align:center">ناس جرّبت الخطة قالت إيه؟</h2>
   <div class="rev-grid">
     <div class="rev-card"><a href="review-1.jpg.jpeg" target="_blank" rel="noopener"><img src="review-1.jpg.jpeg" alt="رسالة من مشتري الخطة: الكتاب جميل جدًا وساعده ينجز حاجات كتير ويحسّن الإنتاجية في المذاكرة" width="720" height="295" loading="lazy"></a></div>
     <div class="rev-card"><a href="review-2.jpg.jpeg" target="_blank" rel="noopener"><img src="review-2.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة كويسة وساعدته يوفّر وقته ويعرف يذاكر إيه كل يوم" width="1013" height="493" loading="lazy"></a></div>
@@ -231,88 +252,38 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </div></section>
 
 <section class="w reveal">
-  <h2>هتعرف في الخطة دي:</h2>
-  <ul class="chk">
-    <li>ليه ممكن تذاكر ساعات طويلة وتنسى تاني يوم، وإزاي <b>جدول المراجعة الذكية</b> يمنع ده.</li>
-    <li>الفرق بين غلطة عادية وغلطة بتتكرر… وإزاي <b>تخلص منها للأبد</b>.</li>
-    <li>إزاي تستخدم <b>الذكاء الاصطناعي</b> في المذاكرة من غير ما يذاكر بدالك.</li>
-    <li>ليه ساعة مذاكرة مركزة ممكن تفيدك أكتر من 3 ساعات مشتّتة.</li>
-    <li>صفحة أسبوعية واحدة بتقولك <b>أنت فين</b> وتعدّل الخطة قبل ما يضيع منك شهر.</li>
-  </ul>
+  <div class="truth"><b>ولو أنت ولي أمر…</b><br>مش مهم بس إن ابنك يقعد ساعات قدام الكتاب. المهم يكون عارف بيعمل إيه، بيتابع تقدمه إزاي، وإيه اللي محتاج يراجعه. النظام ده بيدّيله هيكل واضح يمشي عليه بدل العشوائية — وأنت تقدر تشوف تقدمه بعينك كل أسبوع.</div>
 </section>
-
-<section class="alt"><div class="w reveal">
-  <h2>لو بتحس بالحاجات دي… فأنت مش لوحدك</h2>
-  <ul class="chk x">
-    <li>بتفتح الكتاب ومش عارف تبدأ منين، وتضيع نص ساعة في التفكير.</li>
-    <li>تذاكر النهارده وبعد أسبوع تحس إنك ما ذاكرتش حاجة.</li>
-    <li>بتغلط في نفس النوع من الأسئلة كل مرة، ومحدش قالك السبب.</li>
-    <li>الموبايل بيسحبك، وتقفل يومك وأنت حاسس بالذنب.</li>
-    <li>الكل بيسألك «ذاكرت كام ساعة؟» وأنت عارف إن المشكلة مش في الساعات.</li>
-  </ul>
-  <div class="truth"><b>الحقيقة:</b> المشكلة مش إنك كسلان ولا مش شاطر. المشكلة إن مفيش <b>نظام</b> بيمشي معاك. وده بالظبط اللي هتاخده.</div>
-</div></section>
-
-<section class="w reveal">
-  <h2>الحل: ملف «خطة مذاكرة الثانوية العامة» من Bondly Club</h2>
-  <p class="mute">ده مش كتاب تقراه وخلاص. ده <b style="color:var(--ink)">نظام عملي</b> بتمشي عليه كل يوم — 27 صفحة مترتبة خطوة بخطوة:</p>
-  <div class="grid">
-    <div class="pg"><span class="n">01</span><b>اعرف موقفك</b><span>قيّم كل مادة وحدد قوي في إيه وضعيف في إيه.</span></div>
-    <div class="pg"><span class="n">02</span><b>ابنِ خطتك</b><span>أهدافك، تقسيم المنهج، وخطة أسبوعية واقعية.</span></div>
-    <div class="pg"><span class="n">03</span><b>جلسة مذاكرة مركّزة</b><span>45 دقيقة تركيز + راحة، بقواعد تمنع التشتيت.</span></div>
-    <div class="pg"><span class="n">04</span><b>حل الأسئلة وسد الفجوات</b><span>اعرف سبب كل غلطة وعالجها من جذرها.</span></div>
-    <div class="pg"><span class="n">05</span><b>سجل الأخطاء + المراجعة الذكية</b><span>مواعيد مراجعة محددة عشان المعلومة تثبت.</span></div>
-    <div class="pg"><span class="n">06</span><b>متابعة أسبوعية لحد 9 أسابيع</b><span>تقييم، عادات يومية، ورسالة تشجيع لنفسك.</span></div>
-  </div>
-</section>
-
-<section class="alt"><div class="w reveal">
-  <h2>هتاخد إيه في الآخر؟</h2>
-  <ul class="chk">
-    <li>يوم مذاكرتك <b>مترتب</b> وعارف هتعمل إيه من أول ما تصحى.</li>
-    <li>ساعات مذاكرة <b>مركّزة</b> بدل ساعات ضايعة.</li>
-    <li>معلومات <b>بتثبت</b> في دماغك لحد يوم الامتحان.</li>
-    <li>أخطاء بتقل أسبوع بعد أسبوع، وثقة بتزيد.</li>
-    <li>راحة بال ليك وللأهل، لأنك ماشي على خطة مش على عشوائية.</li>
-  </ul>
-</div></section>
 
 <section class="w reveal">
   <div class="offer">
-    <h2>🎁 عرض الإطلاق</h2>
-    <p class="mute" style="margin-bottom:0">كل اللي محتاجه عشان تنظم السنة كلها في ملف واحد</p>
-    <table class="stack">
-      <tr><td>الخطة الكاملة (27 صفحة)</td><td>250 جنيه</td></tr>
-      <tr><td>سجل الأخطاء وجدول المراجعة الذكية</td><td>150 جنيه</td></tr>
-      <tr><td>صفحات المتابعة الأسبوعية (9 أسابيع)</td><td>100 جنيه</td></tr>
-    </table>
-    <div class="was">القيمة الإجمالية: <b>500 جنيه</b></div>
-    <div class="price"><span data-p>49</span> <small>جنيه بس</small></div>
-    <div><span class="save">هتوفر 451 جنيه — خصم 90%</span></div>
-    <p class="mute">دفعة واحدة، من غير اشتراك ولا مصاريف تانية.</p>
-    <a class="btn" href="#pay">اطلب الخطة دلوقتي — <span data-p>49</span> جنيه</a>
-    <p class="warn">⚠️ ده سعر الإطلاق لفترة محدودة، وبعدها السعر هيزيد.</p>
-    <p class="secure">🔒 دفع آمن عبر محافظ إلكترونية • التسليم على واتساب بعد التأكيد</p>
+    <h2>سعر الإطلاق: <span data-p>49</span> جنيه</h2>
+    <ul class="offer-list">
+      <li>خطة مذاكرة عملية</li>
+      <li>27 صفحة قابلة للطباعة والكتابة</li>
+      <li>نظام تخطيط ومتابعة</li>
+      <li>سجل أخطاء</li>
+      <li>جدول مراجعة</li>
+      <li>متابعة أسبوعية</li>
+      <li>استلام على واتساب</li>
+    </ul>
+    <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
+    <a class="btn" href="#pay">عايز الخطة — <span data-p>49</span> جنيه</a>
+    <p class="one-time">دفعة واحدة — من غير اشتراك ولا مصاريف تانية.</p>
   </div>
 </section>
 
 <section class="alt" id="pay"><div class="w reveal">
-  <h2>إزاي تطلب؟ 3 خطوات وبس</h2>
-  <ol class="steps">
-    <li><b>حوّل <span data-p>49</span> جنيه</b> على أي وسيلة من اللي تحت (فودافون كاش / أورنج كاش / اتصالات كاش / انستا باي).</li>
-    <li><b>صوّر شاشة التحويل</b> وابعتها لينا على واتساب <b dir="ltr">+20 150 045 5750</b>.</li>
-    <li><b>استلم الملف</b> على واتساب بعد ما نتأكد من التحويل، وابدأ من الصفحة الأولى الليلة.</li>
+  <h2>هتطلبها إزاي؟ 3 خطوات بس</h2>
+  <ol class="pay-steps">
+    <li><b>حوّل <span data-p>49</span> جنيه</b> على إنستا باي (الأسرع: بضغطة واحدة) أو على أي محفظة من اللي تحت.</li>
+    <li><b>ابعت سكرين التحويل</b> على واتساب <b dir="ltr">+20 150 045 5750</b>.</li>
+    <li><b>استلم الخطة</b> ملف PDF على واتساب بعد ما نتأكد من التحويل.</li>
   </ol>
 
   <div class="box">
-    <h3>📱 محفظة إلكترونية (فودافون كاش / أورنج كاش / e&amp; money)</h3>
-    <div class="mute" style="font-size:15px">الاسم: <b>Ahmed Gomaa</b> — اتأكد من الاسم قبل ما تأكد التحويل</div>
-    <div class="row"><div class="val">01552268432</div><button class="cp" data-c="01552268432">نسخ</button></div>
-    <div class="row"><div class="val">01500455750</div><button class="cp" data-c="01500455750">نسخ</button></div>
-  </div>
-
-  <div class="box">
     <h3>⚡ انستا باي (InstaPay)</h3>
+    <span class="tag">الأسرع: بضغطة واحدة</span>
     <a class="btn" id="ipn" href="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" target="_blank" rel="noopener noreferrer" style="margin-top:10px;font-size:17px">ادفع <span data-p>49</span> جنيه بإنستا باي</a>
     <div class="row"><button class="cp" data-c="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" style="flex:1">نسخ الرابط</button></div>
     <div class="mute" style="font-size:15px;margin-top:10px">أو امسح الكود ده من تطبيق إنستا باي:</div>
@@ -320,41 +291,38 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
     <div class="mute" style="font-size:14px;margin-top:10px">بعد الدفع، صوّر شاشة التحويل وابعتها على واتساب. اتأكد إن الاسم اللي ظاهر هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b> قبل ما تأكد.</div>
   </div>
 
-  <p class="payhint">💡 اضغط «نسخ» عشان تنسخ الرقم بدون أخطاء، وراجع إن الاسم اللي ظهرلك قبل التأكيد هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b>.</p>
+  <div class="box">
+    <h3>📱 أو حوّل على المحفظة</h3>
+    <div class="mute" style="font-size:15px">فودافون كاش / أورنج كاش / e&amp; money — الاسم: <b>Ahmed Gomaa</b></div>
+    <div class="row"><div class="val">01552268432</div><button class="cp" data-c="01552268432">نسخ</button></div>
+    <div class="row"><div class="val">01500455750</div><button class="cp" data-c="01500455750">نسخ</button></div>
+  </div>
+
+  <p class="payhint">💡 قبل ما تأكد التحويل، اتأكد إن الاسم الظاهر لك هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b>. الدفع عن طريق المحافظ الإلكترونية أو InstaPay.</p>
   <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 بعت سكرين التحويل على واتساب<small>هيتفتح واتساب على رقم +20 150 045 5750 برسالة جاهزة</small></a>
 </div></section>
 
 <section class="w reveal">
-  <div class="guar">
-    <div class="sh">🛡️</div>
-    <div>
-      <h2 style="font-size:21px;margin-bottom:6px">ضمان مفيش فيه مخاطرة</h2>
-      <p class="mute" style="margin:0">لو حصلت أي مشكلة في الملف (مش اتفتح، ناقص، أو مش وصلك)، هنبعتهولك تاني أو نرجّعلك فلوسك. تواصل معانا على واتساب وهنحلها فورًا.</p>
-    </div>
-  </div>
-</section>
-
-<section class="w reveal">
-  <h2>أسئلة بتتسأل كتير</h2>
-  <details open><summary>الملف ده لمين؟</summary><p>لأي طالب ثانوية عامة عايز ينظّم مذاكرته، سواء بتذاكر لوحدك أو مع مدرسين. مناسب لأي شعبة.</p></details>
-  <details><summary>هل لازم أطبعه؟</summary><p>الصفحات معمولة تتملّي بإيدك، فالأفضل تطبعه. ولو مش هتطبعه تقدر تنقل الجداول على كراسة.</p></details>
-  <details><summary>هو بديل للمدرس أو للمنهج؟</summary><p>لأ. ده نظام يرتّب مذاكرتك ويتابعك، مش شرح مواد. بيشتغل مع أي مدرس وأي كتاب.</p></details>
-  <details><summary>هستلم الملف إزاي وإمتى؟</summary><p>بعد ما تحول <span data-p>49</span> جنيه وتبعت سكرين التحويل على واتساب <b dir="ltr">+20 150 045 5750</b>، هنبعتلك الملف PDF على نفس الرقم بعد التأكيد.</p></details>
-  <details><summary>لو حولت فلوس وملقيتش رد؟</summary><p>ابعت سكرين التحويل على واتساب وهنرد عليك ونسلّمك الملف. ولو فيه أي مشكلة فلوسك محفوظة بالضمان.</p></details>
+  <h2>عندك سؤال؟</h2>
+  <details open><summary>هل الخطة كتاب شرح؟</summary><p>لأ. دي مش شرح للمنهج، دي نظام عملي بتملاه وتستخدمه: تخطط، تذاكر، تحل، تسجّل أخطاءك، وتراجع. بتشتغل مع أي مدرس وأي كتاب.</p></details>
+  <details><summary>هل الخطة مناسبة لكل مواد الثانوية؟</summary><p>أيوه. النظام معمول عشان تنظّم بيه أي مادة: بتقيّم مستواك فيها، تحط خطتها، وتتابعها أسبوع بأسبوع.</p></details>
+  <details><summary>هل أقدر أطبعها؟</summary><p>أيوه، وده الأفضل. الصفحات معمولة عشان تتطبع وتتملّي بإيدك. ولو مش هتطبع، تقدر تنقل الجداول على كراسة.</p></details>
+  <details><summary>هتوصلي إزاي؟</summary><p>بعد ما تحول <span data-p>49</span> جنيه وتبعت سكرين التحويل على واتساب <b dir="ltr">+20 150 045 5750</b>، هنبعتلك ملف الـ PDF على نفس الرقم بعد التأكيد.</p></details>
+  <details><summary>هدفع كام؟</summary><p>سعر الإطلاق <span data-p>49</span> جنيه، دفعة واحدة.</p></details>
+  <details><summary>هل فيه اشتراك؟</summary><p>لأ. بتدفع مرة واحدة والملف بيبقى معاك.</p></details>
 </section>
 
 <section class="w reveal" style="text-align:center">
-  <h2>جاهز تبدأ بنظام؟</h2>
-  <a class="btn" href="#pay">أنا جاهز… ابدأ دلوقتي بـ <span data-p>49</span> جنيه</a>
-  <p class="warn">⚠️ سعر الإطلاق مش هيفضل كده كتير.</p>
-  <p style="margin-top:14px"><b>PS:</b> كل يوم بتأجل فيه بيعدّي من وقتك. خد الخطة النهارده بـ <span data-p>49</span> جنيه، وابدأ أول صفحة <b>الليلة</b>.</p>
+  <h2>جاهز تذاكر بنظام؟</h2>
+  <p class="mute">خطة واضحة، وسعر إطلاق <span data-p>49</span> جنيه، وتستلمها على واتساب بعد الدفع على طول.</p>
+  <a class="btn" href="#pay" style="margin-top:12px">عايز الخطة — <span data-p>49</span> جنيه</a>
 </section>
 
 <footer>© Bondly Club — خطة مذاكرة الثانوية العامة<br>للاستفسار واتساب: <b dir="ltr">+20 150 045 5750</b></footer>
 
 <div class="bar">
-  <div class="bar-price"><b><span data-p>49</span> ج</b><s>500 ج</s></div>
-  <a class="btn" href="#pay">اطلب الخطة دلوقتي</a>
+  <div class="bar-price">خطة المذاكرة — <span data-p>49</span> جنيه</div>
+  <a class="btn" href="#pay">اطلب الآن</a>
 </div>
 
 <a class="float-wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="تواصل واتساب">✆</a>
@@ -376,7 +344,6 @@ document.querySelectorAll('a[href="#pay"]').forEach(function(a){
 document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("ipn").addEventListener("click", function(){ tr("AddPaymentInfo"); });
-
 function ok(b){
   tr("AddPaymentInfo");
   if(!b.dataset.t)b.dataset.t=b.textContent;
@@ -406,6 +373,17 @@ document.querySelectorAll(".cp").forEach(function(b){
     }
   });
 });
+
+// fire InitiateCheckout once when payment section is viewed
+if ("IntersectionObserver" in window) {
+  var paySec = document.getElementById("pay");
+  if (paySec) {
+    var pio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { tr("InitiateCheckout"); pio.disconnect(); } });
+    }, { threshold: .3 });
+    pio.observe(paySec);
+  }
+}
 
 // reveal on scroll
 if ("IntersectionObserver" in window) {
