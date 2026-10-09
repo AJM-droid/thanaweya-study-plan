@@ -37,8 +37,9 @@ section{padding:40px 0}
 .topbar b{background:#fff;color:#0a4f44;padding:1px 12px;border-radius:99px;margin:0 4px;white-space:nowrap}
 .hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .hdr-in{max-width:var(--max);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-weight:900;font-size:19px;color:var(--teal)}
-.logo small{display:block;font-size:11.5px;font-weight:700;color:var(--mute);line-height:1.2}
+.logo{font-weight:900;font-size:19px;color:var(--teal);line-height:1.3}
+.logo .brand{display:block}
+.logo .sub-brand{display:block;font-size:11.5px;font-weight:700;color:var(--mute);margin-top:2px}
 .hdr-price{font-weight:900;color:var(--teal);font-size:18px;white-space:nowrap}
 .hdr-cta{background:var(--teal);color:#fff;text-decoration:none;font-weight:800;padding:10px 20px;border-radius:12px;font-size:15.5px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
 .hdr-cta:active{transform:translateY(2px);box-shadow:none}
@@ -74,8 +75,8 @@ section{padding:40px 0}
 .steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0}
 .steps li{counter-increment:s;position:relative;padding:8px 56px 18px 0;font-size:16.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding-left:14px;box-shadow:var(--shadow-sm)}
 .steps li::before{content:counter(s,decimal);position:absolute;right:12px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
-.steps li b{display:block;font-size:17px}
-.steps li span{color:var(--mute);font-size:15px}
+.steps li b{display:block;font-size:17px;margin:2px 0 4px}
+.steps li span{display:block;color:var(--mute);font-size:15px;line-height:1.7}
 .sys-flow{text-align:center;font-weight:800;color:var(--teal);margin:4px 0 0;font-size:15px}
 
 /* reviews */
@@ -165,7 +166,7 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 
 <div class="hdr">
   <div class="hdr-in">
-    <div class="logo">Bondly Club<small>نظام المذاكرة اللي يخلّيك تتقدم</small></div>
+    <div class="logo"><span class="brand">Bondly Club</span><span class="sub-brand">نظام المذاكرة اللي يخلّيك تتقدم</span></div>
     <div style="display:flex;align-items:center;gap:12px">
       <div class="hdr-price"><span data-p>49</span> ج</div>
       <a class="hdr-cta" href="#pay">اطلب النظام</a>
@@ -279,13 +280,22 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   </div>
 
   <div class="box">
-    <h3>📱 أو حوّل على المحفظة</h3>
-    <div class="mute" style="font-size:15px">فودافون كاش / أورنج كاش / e&amp; money — الاسم: <b>Ahmed Gomaa</b></div>
-    <div class="row"><div class="val">01552268432</div><button class="cp" data-c="01552268432">نسخ</button></div>
-    <div class="row"><div class="val">01500455750</div><button class="cp" data-c="01500455750">نسخ</button></div>
+    <h3>📱 حوّل على المحفظة الإلكترونية</h3>
+    <div class="mute" style="font-size:15px">فودافون كاش / أورنج كاش / e&amp; money</div>
+    <div class="mute" style="font-size:15px;margin-top:6px">رقم المحفظة: <b dir="ltr">01552268432</b></div>
+    <div class="mute" style="font-size:15px">اسم المستلم: <b>Ahmed Gomaa</b></div>
+    <div class="row"><div class="val">01552268432</div><button class="cp" data-c="01552268432">نسخ رقم المحفظة</button></div>
   </div>
 
-  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 بعت صورة التحويل على واتساب<small>هيتفتح واتساب على رقم +20 150 045 5750 برسالة جاهزة</small></a>
+  <div class="box">
+    <h3>💬 إرسال إثبات التحويل والاستفسارات</h3>
+    <div class="mute" style="font-size:15px;margin-top:6px">رقم واتساب: <b dir="ltr">+20 150 045 5750</b></div>
+    <a class="btn wa" id="wa2" href="#" target="_blank" rel="noopener" style="margin-top:10px">ابعت صورة التحويل على واتساب</a>
+    <div class="mute" style="font-size:14px;margin-top:10px">بعد التحويل، ابعت صورة إثبات الدفع على واتساب. هنتأكد من الدفع، وبعدها هنبعتلك ملف PDF.</div>
+  </div>
+
+  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 ابعت صورة التحويل على واتساب</a>
+  <p class="mute" style="text-align:center;font-size:14px;margin-top:10px">هيتفتح واتساب على رقم <b dir="ltr">+20 150 045 5750</b> برسالة جاهزة.</p>
 </div></section>
 
 <section class="w reveal">
@@ -327,10 +337,12 @@ var msg = "السلام عليكم، حوّلت " + PRICE + " جنيه لخطة 
 var waUrl = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
 document.getElementById("wa").href = waUrl;
 document.getElementById("waFloat").href = waUrl;
+document.getElementById("wa2").href = waUrl;
 document.querySelectorAll('a[href="#pay"]').forEach(function(a){
   a.addEventListener("click", function(){ tr("InitiateCheckout"); });
 });
 document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
+document.getElementById("wa2").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("ipn").addEventListener("click", function(){ tr("AddPaymentInfo"); });
 function ok(b){
