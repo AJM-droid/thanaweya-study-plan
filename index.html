@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>مشكلتك مش إنك مش بتذاكر… مشكلتك إنك مش بتذاكر بنظام | Bondly Club</title>
-<meta name="description" content="خطة مذاكرة عملية لطالب الثانوية العامة: تعرف تذاكر إيه وإمتى وإزاي، وتتابع تقدمك بدل ما كل يوم تبدأ من الصفر. 27 صفحة قابلة للطباعة بـ 49 جنيه، والاستلام على واتساب.">
-<meta property="og:title" content="مشكلتك مش إنك مش بتذاكر… مشكلتك إنك مش بتذاكر بنظام">
-<meta property="og:description" content="نظام مذاكرة عملي للثانوية العامة: خطة أسبوعية، جلسات تركيز، سجل أخطاء، مراجعة ذكية. 49 جنيه، والدفع بالمحافظ أو InstaPay والاستلام واتساب.">
+<title>بتذاكر، بس مش حاسس إنك بتتقدم؟ | نظام المذاكرة اللي يخلّيك تتقدم — Bondly Club</title>
+<meta name="description" content="نظام المذاكرة اللي يخلّيك تتقدم: 27 صفحة عملية تساعدك تخطط، تذاكر بتركيز، تتابع أخطاءك، وتنظّم مراجعتك. السعر 49 جنيه — الدفع بالمحافظ الإلكترونية أو InstaPay والاستلام على واتساب.">
+<meta property="og:title" content="بتذاكر، بس مش حاسس إنك بتتقدم؟">
+<meta property="og:description" content="نظام عملي لطالب الثانوية العامة: خطة يومية وأسبوعية، جلسات تركيز، سجل أخطاء، جدول مراجعة. 49 جنيه دفعة واحدة — الدفع بالمحافظ أو InstaPay والاستلام واتساب.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e6b5c'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>B</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,15 +45,13 @@ section{padding:40px 0}
 
 /* hero */
 .hero{padding-top:30px;text-align:center}
+.pname{font-weight:900;font-size:19px;color:var(--teal-dark);margin:0 0 10px}
 .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:6px 16px;font-size:14px;font-weight:800;color:var(--teal);box-shadow:var(--shadow-sm)}
-.badge .dot{width:9px;height:9px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 5px rgba(31,170,85,.18)}
 .hero h1{margin:16px 0 10px}
-.hero h1 .hl{color:var(--teal);background:linear-gradient(transparent 62%,#cde9df 62%);padding:0 4px}
 .sub{color:var(--mute);font-size:18px;margin:0 auto 14px;max-width:560px}
 .format{font-weight:800;font-size:16px;margin-bottom:14px}
 .price-big{font-size:64px;font-weight:900;color:var(--teal);line-height:1.1}
 .price-big small{font-size:22px;font-weight:800}
-.price-tag{font-weight:800;color:var(--mute);margin-bottom:16px}
 .btn{display:block;width:100%;background:var(--teal);color:#fff;border:0;border-radius:15px;padding:16px;font:900 19px Cairo,sans-serif;text-align:center;text-decoration:none;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .08s}
 .btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
 .under-cta{font-size:14.5px;color:var(--mute);margin-top:12px}
@@ -79,13 +77,6 @@ section{padding:40px 0}
 .steps li b{display:block;font-size:17px}
 .steps li span{color:var(--mute);font-size:15px}
 .sys-flow{text-align:center;font-weight:800;color:var(--teal);margin:4px 0 0;font-size:15px}
-
-/* before-after */
-.ba{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;box-shadow:var(--shadow-sm)}
-.ba .before{color:var(--mute);font-size:15.5px}
-.ba .before b{color:var(--red)}
-.ba .after{font-size:16.5px;margin-top:6px}
-.ba .after b{color:var(--teal-dark)}
 
 /* reviews */
 .reviews-sec{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -113,7 +104,6 @@ section{padding:40px 0}
 .offer-list li{padding:9px 40px 9px 0;position:relative;border-bottom:1px dashed var(--line);font-size:16px}
 .offer-list li:last-child{border-bottom:0}
 .offer-list li::before{content:"✓";position:absolute;right:4px;top:9px;width:26px;height:26px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-weight:900}
-.one-time{font-size:14px;color:var(--mute);margin-top:10px}
 
 /* payment */
 .pay-steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0}
@@ -121,7 +111,6 @@ section{padding:40px 0}
 .pay-steps li::before{content:counter(s);position:absolute;right:0;top:6px;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
 .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0;box-shadow:var(--shadow-sm)}
 .box h3{font-size:17px;margin-bottom:4px}
-.tag{display:inline-block;background:var(--teal-light);color:var(--teal-dark);font-size:13px;font-weight:800;border-radius:99px;padding:2px 12px;margin-bottom:6px}
 .row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
 .val{flex:1;min-width:190px;direction:ltr;text-align:left;background:#eef6f2;border:2px dashed var(--teal);border-radius:12px;padding:11px 14px;font:800 18px/1.3 ui-monospace,Menlo,Consolas,monospace;user-select:all;word-break:break-all;color:#0a3d34}
 .cp{background:var(--teal);color:#fff;border:0;border-radius:11px;padding:12px 20px;font:800 15.5px Cairo,sans-serif;cursor:pointer;min-width:88px}
@@ -172,146 +161,121 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="topbar">عرض الإطلاق لطلاب الثانوية العامة — <b><span data-p>49</span> جنيه</b></div>
+<div class="topbar">لطلاب الثانوية العامة — السعر: <b><span data-p>49</span> جنيه</b></div>
 
 <div class="hdr">
   <div class="hdr-in">
-    <div class="logo">Bondly Club<small>خطة مذاكرة الثانوية العامة</small></div>
+    <div class="logo">Bondly Club<small>نظام المذاكرة اللي يخلّيك تتقدم</small></div>
     <div style="display:flex;align-items:center;gap:12px">
       <div class="hdr-price"><span data-p>49</span> ج</div>
-      <a class="hdr-cta" href="#pay">عايز الخطة</a>
+      <a class="hdr-cta" href="#pay">اطلب النظام</a>
     </div>
   </div>
 </div>
 
 <header class="hero w">
-  <span class="badge"><span class="dot"></span> نظام مذاكرة عملي — مش مجرد ملف</span>
-  <h1>مشكلتك مش إنك مش بتذاكر… <span class="hl">مشكلتك إنك مش بتذاكر بنظام.</span></h1>
-  <p class="sub">خطة مذاكرة عملية لطالب الثانوية العامة: تعرف تذاكر إيه وإمتى وإزاي، وتحل أسئلة، وتصلّح أخطاءك، وتراجع في الوقت الصح — بدل ما كل يوم تبدأ من الصفر.</p>
-  <p class="format">📄 27 صفحة عملية — اطبعها واكتب فيها بإيدك</p>
-  <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
-  <a class="btn" href="#pay">عايز الخطة — <span data-p>49</span> جنيه</a>
+  <p class="pname">نظام المذاكرة اللي يخلّيك تتقدم</p>
+  <span class="badge">لطلاب الثانوية العامة</span>
+  <h1>بتذاكر، بس مش حاسس إنك بتتقدم؟</h1>
+  <p class="sub">نظّم مذاكرتك، تابع أخطاءك، واعرف إيه اللي محتاج تراجعه — بنظام عملي يساعدك تعرف هتعمل إيه وإيه الخطوة اللي بعدها.</p>
+  <p class="format">27 صفحة عملية تساعدك تخطط، تذاكر بتركيز، تتابع أخطاءك، وتنظّم مراجعتك.</p>
+  <div class="price-big"><span data-p>49</span> <small>جنيه</small></div>
+  <a class="btn" href="#pay">عايز أبدأ أذاكر بنظام</a>
   <p class="under-cta">الدفع بالمحافظ الإلكترونية أو InstaPay • الاستلام على واتساب</p>
   <a class="secondary" href="#preview">بص جوه الخطة ↓</a>
 </header>
 
 <section class="w reveal">
-  <h2>بتحصل معاك الحاجات دي؟</h2>
+  <h2>بتخلص يومك في المذاكرة، بس مش عارف وصلت لفين؟</h2>
+  <p class="mute">يمكن بتقعد بالساعات قدام الكتب، وبتحاول تخلّص اللي عليك، لكن لما تيجي تراجع تلاقي حاجات نسيتها، وأسئلة بتغلط فيها أكتر من مرة، ومش عارف إذا كانت مذاكرتك فعلًا بتجيب نتيجة ولا لأ.</p>
+  <p class="mute">ويمكن تعمل جدول بحماس، وبعد كام يوم تلاقي نفسك رجعت للعشوائية تاني.</p>
+  <p>المشكلة مش بالضرورة إنك مش بتبذل مجهود. أحيانًا أنت محتاج طريقة أوضح تنظّم بيها شغلك وتعرف إيه اللي محتاج اهتمام.</p>
   <ul class="chk x">
-    <li>بتفتح الكتاب ومش عارف تبدأ منين.</li>
-    <li>بتضيع وقت قبل ما تبدأ أصلًا.</li>
-    <li>تذاكر النهارده وبعد كام يوم تحس إنك نسيت.</li>
-    <li>تحل كتير لكن تكرر نفس الغلط.</li>
-    <li>تعمل جدول حلو وتسيبه بعد كام يوم.</li>
-    <li>اليوم يخلص ومش عارف أنجزت إيه فعلًا.</li>
-    <li>الموبايل والتشتت بياكلوا جزء كبير من وقتك.</li>
+    <li>مش عارف تبدأ بإيه كل يوم.</li>
+    <li>بتنسى أجزاء من اللي ذاكرتها.</li>
+    <li>بتكرر أخطاء في الأسئلة.</li>
+    <li>بتعمل جدول ومش بتعرف تلتزم بيه.</li>
+    <li>مش عارف إيه اللي محتاج مراجعة فعلًا.</li>
+    <li>بتحس إنك مشغول، لكن مش شايف تقدم واضح.</li>
   </ul>
-  <div class="truth"><b>المشكلة مش بالضرورة إنك كسلان.</b><br>المشكلة إنك محتاج نظام واضح تمشي عليه.</div>
 </section>
 
 <section class="w reveal">
   <div class="big-idea">
-    <h2>مش محتاج ساعات أكتر. محتاج نظام أوضح.</h2>
-    <p>مش كل ساعة مذاكرة بتساوي نفس النتيجة. لما تدخل الجلسة بهدف واضح، وتعرف هتعمل إيه، وتراجع أخطاءك، وقتك بيبقى له قيمة أكبر. النظام ده معمول عشان كل جلسة مذاكرة يبقى ليها معنى.</p>
+    <h2>مش المطلوب إنك تزوّد ساعات المذاكرة وخلاص</h2>
+    <p>المهم كمان إنك تعرف هتذاكر إيه، وهتتابع شغلك إزاي، وهتتعامل مع أخطائك ومراجعتك بطريقة منظمة.</p>
+    <p>بدل ما تعتمد على إحساسك أو تحاول تبدأ من الصفر كل يوم، يبقى عندك نظام ترجع له وتعرف الخطوة الجاية.</p>
   </div>
 </section>
 
 <section class="w reveal" id="system">
-  <h2>الخطة بتمشي معاك خطوة بخطوة</h2>
+  <h2>بدل العشوائية، امشِ على خطوات واضحة</h2>
   <p class="mute">مش شوية ورق متفرق. ده نظام واحد: كل خطوة بتسلّم للي بعدها.</p>
   <ol class="steps">
-    <li><b>01 — اعرف موقفك</b><span>قيّم كل مادة، واعرف أنت قوي في إيه وإيه محتاج شغل أكتر.</span></li>
-    <li><b>02 — ابنِ خطتك</b><span>حوّل المطلوب منك لخطة أسبوعية واقعية تقدر تنفذها.</span></li>
-    <li><b>03 — ذاكر بتركيز</b><span>ادخل جلسة المذاكرة وأنت عارف هدفك بدل ما تقعد قدام الكتاب وخلاص. (النظام ماشي بجلسات 45 دقيقة + راحة).</span></li>
-    <li><b>04 — حل وحلل أخطاءك</b><span>مش بس تعرف إن الإجابة غلط؛ تعرف الغلط حصل ليه وإيه اللي محتاج يتراجع.</span></li>
-    <li><b>05 — راجع في الوقت الصح</b><span>استخدم جدول مراجعة يساعدك ترجع للمعلومات قبل ما تختفي من ذاكرتك.</span></li>
-    <li><b>06 — تابع وعدّل</b><span>كل أسبوع شوف أنت وصلت لفين وعدّل خطتك بناءً على الواقع.</span></li>
+    <li><b>01 — اعرف موقفك</b><span>قيّم موادك وحدد موقفك الحالي قبل ما تبني خطتك.</span></li>
+    <li><b>02 — ابنِ خطتك</b><span>نظّم المطلوب منك في خطة يومية وأسبوعية تقدر ترجع لها.</span></li>
+    <li><b>03 — ذاكر بتركيز</b><span>حدّد هدف جلسة المذاكرة واشتغل من خلال إطار واضح.</span></li>
+    <li><b>04 — حلّل أخطاءك</b><span>سجّل الأخطاء اللي بتتكرر وحدد إيه اللي محتاج تراجعه أو تفهمه بشكل أفضل.</span></li>
+    <li><b>05 — نظّم مراجعتك</b><span>استخدم جدول يساعدك تحدد إيه اللي محتاج ترجع له ومتى.</span></li>
+    <li><b>06 — تابع وعدّل</b><span>راجع شغلك أسبوعيًا وعدّل خطتك بناءً على اللي حصل فعلًا.</span></li>
   </ol>
   <p class="sys-flow">↓ خطوة واحدة بتسلّم للي بعدها ↓</p>
 </section>
 
 <section class="w reveal" id="preview">
-  <h2>بص جوه الخطة</h2>
-  <p class="mute">دي مش مجرد فكرة بنشرحها لك. دي الصفحات اللي هتستخدمها فعلًا عشان تنظم مذاكرتك وتتابع تقدمك — من الملف نفسه، من غير تجميل.</p>
+  <h2>شوف بنفسك إيه اللي هتستخدمه</h2>
+  <p class="mute">دي صفحات حقيقية من النظام. بص عليها وشوف إذا كانت طريقة الاستخدام مناسبة ليك قبل ما تطلبه.</p>
   <div class="pv-grid">
-    <div class="pv-card"><a href="preview-1-know-your-position.jpg" target="_blank" rel="noopener"><img src="preview-1-know-your-position.jpg" alt="صفحة اعرف موقفك: جدول تقييم المواد ومستواك في كل مادة" width="640" height="896" loading="lazy"></a><p class="pv-cap"><b>1 — اعرف موقفك</b><span>حدد أنت واقف فين قبل ما تبني خطتك.</span></p></div>
-    <div class="pv-card"><a href="preview-2-focused-session.jpeg" target="_blank" rel="noopener"><img src="preview-2-focused-session.jpeg" alt="صفحة جلسة المذاكرة المركزة: الهدف والمدة وتقييم الجلسة" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>2 — جلسة مذاكرة مركزة</b><span>ادخل كل جلسة وأنت عارف المطلوب منك.</span></p></div>
-    <div class="pv-card"><a href="preview-3-mistakes-log.jpeg" target="_blank" rel="noopener"><img src="preview-3-mistakes-log.jpeg" alt="صفحة سجل الأخطاء: سبب كل غلطة وخطة إصلاحها ومواعيد مراجعتها" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>3 — سجل الأخطاء</b><span>اعرف أخطاءك المتكررة بدل ما تكررها.</span></p></div>
-    <div class="pv-card"><a href="preview-4-smart-review.jpeg" target="_blank" rel="noopener"><img src="preview-4-smart-review.jpeg" alt="صفحة المراجعة الذكية: جدول مواعيد المراجعة لكل موضوع" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>4 — المراجعة الذكية</b><span>نظم مراجعتك بدل ما تعتمد على إنك تفتكر لوحدك.</span></p></div>
+    <div class="pv-card"><a href="preview-1-know-your-position.jpg" target="_blank" rel="noopener"><img src="preview-1-know-your-position.jpg" alt="صفحة اعرف موقفك: جدول تقييم المواد ومستواك في كل مادة" width="640" height="896" loading="lazy"></a><p class="pv-cap"><b>اعرف موقفك</b><span>حدد أنت واقف فين قبل ما تبني خطتك.</span></p></div>
+    <div class="pv-card"><a href="preview-2-focused-session.jpeg" target="_blank" rel="noopener"><img src="preview-2-focused-session.jpeg" alt="صفحة جلسة المذاكرة المركزة: الهدف والمدة وتقييم الجلسة" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>جلسة مذاكرة مركزة</b><span>ادخل كل جلسة وأنت عارف المطلوب منك.</span></p></div>
+    <div class="pv-card"><a href="preview-3-mistakes-log.jpeg" target="_blank" rel="noopener"><img src="preview-3-mistakes-log.jpeg" alt="صفحة سجل الأخطاء: سبب كل غلطة وخطة إصلاحها ومواعيد مراجعتها" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>سجل الأخطاء</b><span>اعرف أخطاءك المتكررة بدل ما تكررها.</span></p></div>
+    <div class="pv-card"><a href="preview-4-smart-review.jpeg" target="_blank" rel="noopener"><img src="preview-4-smart-review.jpeg" alt="صفحة المراجعة الذكية: جدول مواعيد المراجعة لكل موضوع" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>المراجعة الذكية</b><span>نظم مراجعتك بدل ما تعتمد على إنك تفتكر لوحدك.</span></p></div>
   </div>
   <p class="mute" style="margin-top:12px;font-size:14.5px">دوس على أي صفحة عشان تشوفها بحجمها الكامل.</p>
 </section>
 
-<section class="w reveal">
-  <h2>بدل ما… هتعرف</h2>
-  <div class="ba"><p class="before">بدل ما تقول: <b>«أذاكر إيه النهارده؟»</b></p><p class="after">هتعرف: <b>المطلوب مني النهارده هو…</b> مكتوب في خطتك.</p></div>
-  <div class="ba"><p class="before">بدل: <b>«أنا بكرر نفس الغلط.»</b></p><p class="after">هتعرف: <b>إيه الغلط اللي بيتكرر وليه،</b> من سجل أخطاءك.</p></div>
-  <div class="ba"><p class="before">بدل: <b>«أنا ذاكرت كتير… بس مش عارف أنا فين.»</b></p><p class="after">هتعرف: <b>أنا وصلت لفين وإيه اللي محتاج يتظبط،</b> من مراجعتك الأسبوعية.</p></div>
-</section>
-
-<section class="alt"><div class="w reveal">
-  <h2>جوه الخطة هتلاقي إيه؟</h2>
-  <ul class="chk">
-    <li>تقييم موادك عشان تعرف تبدأ منين.</li>
-    <li>خطة أسبوعية وخطة يومية جاهزة تملاها.</li>
-    <li>ورقة جلسة المذاكرة: هدف الجلسة ومدتها والنتيجة.</li>
-    <li>متابعة حل الأسئلة أول بأول.</li>
-    <li>سجل أخطاء بيقولك الغلط بيتكرر فين وليه.</li>
-    <li>جدول المراجعة الذكية بمواعيد محددة.</li>
-    <li>مراجعة أسبوعية بالأرقام لحد 9 أسابيع.</li>
-  </ul>
-  <p class="mute" style="margin-top:12px">27 صفحة، كلها معمولة عشان تتطبع وتتملّي بإيدك.</p>
-</div></section>
-
 <section class="reviews-sec reveal"><div class="w">
-  <h2 style="text-align:center">ناس جرّبت الخطة قالت إيه؟</h2>
+  <h2 style="text-align:center">ناس جرّبت النظام قالت إيه؟</h2>
   <div class="rev-grid">
     <div class="rev-card"><a href="review-1.jpg.jpeg" target="_blank" rel="noopener"><img src="review-1.jpg.jpeg" alt="رسالة من مشتري الخطة: الكتاب جميل جدًا وساعده ينجز حاجات كتير ويحسّن الإنتاجية في المذاكرة" width="720" height="295" loading="lazy"></a></div>
     <div class="rev-card"><a href="review-2.jpg.jpeg" target="_blank" rel="noopener"><img src="review-2.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة كويسة وساعدته يوفّر وقته ويعرف يذاكر إيه كل يوم" width="1013" height="493" loading="lazy"></a></div>
     <div class="rev-card"><a href="review-3.jpg.jpeg" target="_blank" rel="noopener"><img src="review-3.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة ساعدته ينظّم وقته بعد ما كان متلخبط" width="889" height="342" loading="lazy"></a></div>
   </div>
   <p class="rev-note">آراء حقيقية من مستخدمين، نُشرت بموافقتهم.</p>
+  <p class="rev-note">لو عندك سؤال عن محتويات الملف أو طريقة استلامه، تقدر تتواصل معانا على واتساب.</p>
 </div></section>
 
 <section class="w reveal">
-  <div class="truth"><b>ولو أنت ولي أمر…</b><br>مش مهم بس إن ابنك يقعد ساعات قدام الكتاب. المهم يكون عارف بيعمل إيه، بيتابع تقدمه إزاي، وإيه اللي محتاج يراجعه. النظام ده بيدّيله هيكل واضح يمشي عليه بدل العشوائية — وأنت تقدر تشوف تقدمه بعينك كل أسبوع.</div>
-</section>
-
-<section class="w reveal">
   <div class="offer">
-    <h2>سعر الإطلاق: <span data-p>49</span> جنيه</h2>
+    <h2>ابدأ تنظّم مذاكرتك بنظام واضح</h2>
+    <p class="mute">لو محتاج طريقة تساعدك تخطط، وتتابع أخطاءك، وتنظّم مراجعتك، فالنظام ده معمول عشان يوفرلك أدوات عملية تستخدمها في مذاكرتك.</p>
+    <p style="font-weight:900;font-size:19px;margin:12px 0 0">نظام المذاكرة اللي يخلّيك تتقدم</p>
+    <div class="price-big"><span data-p>49</span> <small>جنيه — دفعة واحدة</small></div>
     <ul class="offer-list">
-      <li>خطة مذاكرة عملية</li>
-      <li>27 صفحة قابلة للطباعة والكتابة</li>
-      <li>نظام تخطيط ومتابعة</li>
-      <li>سجل أخطاء</li>
-      <li>جدول مراجعة</li>
-      <li>متابعة أسبوعية</li>
-      <li>استلام على واتساب</li>
+      <li>ملف PDF من 27 صفحة عملية.</li>
+      <li>تخطيط ومتابعة للمذاكرة.</li>
+      <li>أدوات لتنظيم جلسات المذاكرة والأخطاء والمراجعة.</li>
+      <li>متابعة أسبوعية لمدة تصل إلى 9 أسابيع.</li>
     </ul>
-    <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
-    <a class="btn" href="#pay">عايز الخطة — <span data-p>49</span> جنيه</a>
-    <p class="one-time">دفعة واحدة — من غير اشتراك ولا مصاريف تانية.</p>
+    <a class="btn" href="#pay">اطلب النظام بـ<span data-p>49</span> جنيه</a>
   </div>
 </section>
 
 <section class="alt" id="pay"><div class="w reveal">
-  <h2>هتطلبها إزاي؟ 4 خطوات بس</h2>
+  <h2>تطلبه إزاي؟</h2>
   <ol class="pay-steps">
-    <li><b>حوّل <span data-p>49</span> جنيه</b> على إنستا باي (الأسرع: بضغطة واحدة) أو على أي محفظة من اللي تحت.</li>
-    <li><b>اتأكد إن الاسم الظاهر لك هو Ahmed Gomaa</b> والمبلغ <span data-p>49</span> جنيه قبل ما تأكد.</li>
-    <li><b>ابعت سكرين التحويل</b> على واتساب <b dir="ltr">+20 150 045 5750</b>.</li>
-    <li><b>استلم الخطة</b> ملف PDF على واتساب بعد ما نتأكد من التحويل.</li>
+    <li><b>حوّل <span data-p>49</span> جنيه بالطريقة المناسبة ليك.</b></li>
+    <li><b>اتأكد من اسم المستلم والمبلغ قبل تأكيد التحويل.</b></li>
+    <li><b>ابعت صورة التحويل على واتساب.</b> بعد التأكد من الدفع، هنبعتلك ملف PDF على واتساب.</li>
   </ol>
 
   <div class="box">
     <h3>⚡ انستا باي (InstaPay)</h3>
-    <span class="tag">الأسرع: بضغطة واحدة</span>
     <a class="btn" id="ipn" href="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" target="_blank" rel="noopener noreferrer" style="margin-top:10px;font-size:17px">ادفع <span data-p>49</span> جنيه بإنستا باي</a>
     <div class="row"><button class="cp" data-c="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" style="flex:1">نسخ الرابط</button></div>
     <div class="mute" style="font-size:15px;margin-top:10px">أو امسح الكود ده من تطبيق إنستا باي:</div>
     <div style="background:#fff;border-radius:14px;padding:14px;margin-top:8px;text-align:center"><img src="instapay-qr.jpg" alt="كود QR للدفع عبر إنستا باي" width="516" height="552" loading="lazy" style="width:220px;height:auto;max-width:100%;display:inline-block;border-radius:8px"></div>
-    <div class="mute" style="font-size:14px;margin-top:10px">بعد الدفع، صوّر شاشة التحويل وابعتها على واتساب. اتأكد إن الاسم اللي ظاهر هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b> قبل ما تأكد.</div>
+    <div class="mute" style="font-size:14px;margin-top:10px">الاسم: <b>Ahmed Gomaa</b> — اتأكد إن الاسم اللي ظاهر هو Ahmed Gomaa والمبلغ <b><span data-p>49</span> جنيه</b> قبل ما تأكد.</div>
   </div>
 
   <div class="box">
@@ -321,31 +285,32 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
     <div class="row"><div class="val">01500455750</div><button class="cp" data-c="01500455750">نسخ</button></div>
   </div>
 
-  <p class="payhint">💡 قبل ما تأكد التحويل، اتأكد إن الاسم الظاهر لك هو <b>Ahmed Gomaa</b> والمبلغ <b><span data-p>49</span> جنيه</b>. الدفع عن طريق المحافظ الإلكترونية أو InstaPay.</p>
-  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 بعت سكرين التحويل على واتساب<small>هيتفتح واتساب على رقم +20 150 045 5750 برسالة جاهزة</small></a>
-  <div class="truth" style="margin-top:14px">🛡️ <b>لو الملف ما وصلكش أو حصلت مشكلة في فتحه،</b> تواصل معانا على واتساب وهنساعدك.</div>
+  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 بعت صورة التحويل على واتساب<small>هيتفتح واتساب على رقم +20 150 045 5750 برسالة جاهزة</small></a>
 </div></section>
 
 <section class="w reveal">
   <h2>عندك سؤال؟</h2>
-  <details open><summary>هل الخطة كتاب شرح؟</summary><p>لأ. دي مش كتاب شرح للمواد. دي نظام عملي يساعدك تنظم مذاكرتك، تخطط، تتابع، تحل، تحلل أخطاءك وتراجع.</p></details>
-  <details><summary>هل الخطة مناسبة لكل مواد الثانوية؟</summary><p>أيوه. الخطة مش مرتبطة بمادة معينة، فممكن تستخدمها مع كل موادك.</p></details>
-  <details><summary>هل أقدر أطبعها؟</summary><p>أيوه. الصفحات معمولة بحيث تقدر تطبعها وتكتب فيها بإيدك.</p></details>
-  <details><summary>هتوصلي إزاي؟</summary><p>بعد تأكيد الدفع، هنبعتلك الخطة على واتساب.</p></details>
-  <details><summary>هدفع كام؟</summary><p><span data-p>49</span> جنيه فقط، مرة واحدة.</p></details>
-  <details><summary>هل فيه اشتراك؟</summary><p>لأ. مفيش اشتراك شهري أو رسوم إضافية.</p></details>
+  <details open><summary>هل ده كتاب شرح للمنهج؟</summary><p>لأ. ده نظام عملي لتنظيم المذاكرة ومتابعة التخطيط والأخطاء والمراجعة. هتستخدمه مع كتبك ومدرسيك ومصادرك المعتادة.</p></details>
+  <details><summary>هل ينفع مع كل مواد الثانوية العامة؟</summary><p>النظام مصمم عشان تقدر تنظّم بيه مواد مختلفة، وتقيّم موقفك في كل مادة وتتابع شغلك عليها.</p></details>
+  <details><summary>هل لازم أطبع الملف؟</summary><p>الطباعة هي الطريقة الأفضل لاستخدام الصفحات والكتابة فيها، لكن تقدر تنقل الجداول على كراسة لو مش هتطبع.</p></details>
+  <details><summary>هل النظام يضمن إني أجيب درجات أعلى؟</summary><p>مفيش نظام يقدر يضمن درجة معينة؛ لأن النتيجة مرتبطة بعوامل كتير، منها مستواك والتزامك وطريقة مذاكرتك. النظام بيوفر لك أدوات تساعدك تخطط وتتابع أخطاءك ومراجعتك وتعدّل شغلك.</p></details>
+  <details><summary>هستلم المنتج إزاي؟</summary><p>بعد تحويل المبلغ وإرسال إثبات التحويل على واتساب، هنبعتلك ملف PDF بعد التأكد من الدفع.</p></details>
+  <details><summary>هل فيه اشتراك شهري؟</summary><p>لأ. بتدفع مرة واحدة، والملف بيبقى معاك.</p></details>
+  <details><summary>هل أقدر أسأل لو عندي مشكلة في الاستلام؟</summary><p>لو عندك سؤال عن الملف أو طريقة الاستلام، تقدر تتواصل معانا على واتساب.</p></details>
 </section>
 
 <section class="w reveal" style="text-align:center">
-  <h2>جاهز تذاكر بنظام؟</h2>
-  <p class="mute">خطة واضحة، وسعر إطلاق <span data-p>49</span> جنيه، وتستلمها على واتساب بعد الدفع على طول.</p>
-  <a class="btn" href="#pay" style="margin-top:12px">عايز الخطة — <span data-p>49</span> جنيه</a>
+  <h2>خلي مذاكرتك أوضح، خطوة بخطوة</h2>
+  <p class="mute">ابدأ بخطة تقدر ترجع لها، وتابع شغلك بدل ما تضطر تبدأ من الصفر كل يوم.</p>
+  <p style="font-weight:900;font-size:19px">نظام المذاكرة اللي يخلّيك تتقدم</p>
+  <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
+  <a class="btn" href="#pay" style="margin-top:12px">اطلب النظام دلوقتي — <span data-p>49</span> جنيه</a>
 </section>
 
-<footer>© Bondly Club — خطة مذاكرة الثانوية العامة<br>للاستفسار واتساب: <b dir="ltr">+20 150 045 5750</b></footer>
+<footer>© Bondly Club<br>واتساب: <b dir="ltr">+20 150 045 5750</b></footer>
 
 <div class="bar">
-  <div class="bar-price">خطة المذاكرة — <span data-p>49</span> جنيه</div>
+  <div class="bar-price">نظام المذاكرة — <span data-p>49</span> جنيه</div>
   <a class="btn" href="#pay">اطلب الآن</a>
 </div>
 
