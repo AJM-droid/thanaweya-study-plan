@@ -1,400 +1,207 @@
 <!DOCTYPE html>
-<html lang="ar-EG" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>بتذاكر، بس مش حاسس إنك بتتقدم؟ | نظام المذاكرة اللي يخلّيك تتقدم — Bondly Club</title>
-<meta name="description" content="نظام المذاكرة اللي يخلّيك تتقدم: 27 صفحة عملية تساعدك تخطط، تذاكر بتركيز، تتابع أخطاءك، وتنظّم مراجعتك. السعر 49 جنيه — الدفع بالمحافظ الإلكترونية أو InstaPay والاستلام على واتساب.">
-<meta property="og:title" content="بتذاكر، بس مش حاسس إنك بتتقدم؟">
-<meta property="og:description" content="نظام عملي لطالب الثانوية العامة: خطة يومية وأسبوعية، جلسات تركيز، سجل أخطاء، جدول مراجعة. 49 جنيه دفعة واحدة — الدفع بالمحافظ أو InstaPay والاستلام واتساب.">
+<title>Cleaning Quote Follow-Up System | Bondly Club</title>
+<meta name="description" content="A simple follow-up system for US residential cleaning businesses. Track your quotes, know when to follow up, and decide what to say. One-time payment of $19.">
+<meta property="og:title" content="Sent a Quote? Know What to Do Next.">
+<meta property="og:description" content="The Cleaning Business Quote Follow-Up System: message kit, action guide, quote tracker, and Five-Quote Quick Start. $19 one time.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e6b5c'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>B</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
 <style>
 :root{
-  --bg:#f4f7f6; --card:#ffffff; --ink:#10201c; --mute:#5b6f6a;
+  --bg:#f7f8f7; --card:#ffffff; --ink:#14201d; --mute:#55655f;
   --teal:#0e6b5c; --teal-dark:#0a4f44; --teal-light:#e2f1ec;
-  --line:#dbe7e2; --red:#c4271b; --wa:#1faa55;
-  --r:18px; --shadow:0 10px 30px rgba(16,60,52,.10); --shadow-sm:0 4px 14px rgba(16,60,52,.08);
+  --line:#dbe7e2;
+  --radius:12px;
+  --shadow-sm:0 2px 10px rgba(16,60,52,.07);
   --max:720px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.85 Cairo,Tahoma,Arial,sans-serif;padding-bottom:86px;-webkit-font-smoothing:antialiased}
-h1,h2,h3{margin:0;line-height:1.5;font-weight:900}
-h1{font-size:clamp(27px,7vw,40px);letter-spacing:-.3px}
-h2{font-size:clamp(22px,5.6vw,29px);margin-bottom:14px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--font);padding-bottom:76px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;line-height:1.3;letter-spacing:-.2px}
+h1{font-size:clamp(30px,7vw,44px);font-weight:800}
+h2{font-size:clamp(23px,5.4vw,30px);font-weight:800;margin-bottom:12px}
+h3{font-size:18px;font-weight:700}
 p{margin:0 0 12px}
-.w{max-width:var(--max);margin:auto;padding:0 18px}
-section{padding:40px 0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:44px 0}
 .mute{color:var(--mute)}
-:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
-/* top bar + header */
-.topbar{background:linear-gradient(90deg,#0a4f44,#0e6b5c);color:#fff;text-align:center;font-weight:800;font-size:15.5px;padding:10px 14px}
-.topbar b{background:#fff;color:#0a4f44;padding:1px 12px;border-radius:99px;margin:0 4px;white-space:nowrap}
-.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.hdr-in{max-width:var(--max);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-weight:900;font-size:19px;color:var(--teal);line-height:1.3}
-.logo .brand{display:block}
-.logo .sub-brand{display:block;font-size:11.5px;font-weight:700;color:var(--mute);margin-top:2px}
-.hdr-price{font-weight:900;color:var(--teal);font-size:18px;white-space:nowrap}
-.hdr-cta{background:var(--teal);color:#fff;text-decoration:none;font-weight:800;padding:10px 20px;border-radius:12px;font-size:15.5px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
-.hdr-cta:active{transform:translateY(2px);box-shadow:none}
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{max-width:var(--max);margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;font-size:19px;color:var(--teal)}
+.hdr-cta{background:var(--teal);color:#fff;text-decoration:none;font-weight:700;padding:9px 20px;border-radius:10px;font-size:15px}
 
 /* hero */
-.hero{padding-top:30px;text-align:center}
-.pname{font-weight:900;font-size:19px;color:var(--teal-dark);margin:0 0 10px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:6px 16px;font-size:14px;font-weight:800;color:var(--teal);box-shadow:var(--shadow-sm)}
-.hero h1{margin:16px 0 10px}
-.sub{color:var(--mute);font-size:18px;margin:0 auto 14px;max-width:560px}
-.format{font-weight:800;font-size:16px;margin-bottom:14px}
-.price-big{font-size:64px;font-weight:900;color:var(--teal);line-height:1.1}
-.price-big small{font-size:22px;font-weight:800}
-.btn{display:block;width:100%;background:var(--teal);color:#fff;border:0;border-radius:15px;padding:16px;font:900 19px Cairo,sans-serif;text-align:center;text-decoration:none;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .08s}
-.btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
-.under-cta{font-size:14.5px;color:var(--mute);margin-top:12px}
-.secondary{display:inline-block;margin-top:10px;font-weight:800;color:var(--teal);text-decoration:underline;text-underline-offset:4px;font-size:16px}
+.hero{padding-top:36px;text-align:left}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--teal);background:var(--teal-light);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{margin-bottom:14px}
+.hero .sub{font-size:18px;color:var(--mute);max-width:560px}
+.btn{display:block;width:100%;background:var(--teal);color:#fff;border:0;border-radius:var(--radius);padding:16px 20px;font:700 18px var(--font);text-align:center;text-decoration:none;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.14)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.14)}
+.btn-note{text-align:center;font-size:14px;color:var(--mute);margin-top:10px}
 
-/* checklists */
-.chk{list-style:none;padding:0;margin:6px 0 0}
-.chk li{position:relative;padding:13px 46px 13px 0;border-bottom:1px solid var(--line);font-size:16.5px}
-.chk li:last-child{border-bottom:0}
-.chk li::before{content:"✓";position:absolute;right:0;top:12px;width:31px;height:31px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
-.chk.x li::before{content:"✕";background:var(--red)}
-.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.truth{background:var(--teal-light);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:16px;font-size:16.5px}
-.truth b{color:var(--teal-dark)}
-.big-idea{background:var(--teal);color:#fff;border-radius:18px;padding:22px 20px;text-align:center;box-shadow:var(--shadow);margin-top:6px}
-.big-idea h2{margin-bottom:8px}
-.big-idea p{margin:0;opacity:.92;font-size:16.5px}
+/* lists */
+.ticks{list-style:none;padding:0;margin:14px 0 0}
+.ticks li{position:relative;padding:10px 0 10px 40px;font-size:16.5px;border-bottom:1px solid var(--line)}
+.ticks li:last-child{border-bottom:0}
+.ticks li::before{content:"✓";position:absolute;left:0;top:10px;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800}
+.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-/* system steps */
-.steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0}
-.steps li{counter-increment:s;position:relative;padding:8px 56px 18px 0;font-size:16.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding-left:14px;box-shadow:var(--shadow-sm)}
-.steps li::before{content:counter(s,decimal);position:absolute;right:12px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px}
-.steps li b{display:block;font-size:17px;margin:2px 0 4px}
-.steps li span{display:block;color:var(--mute);font-size:15px;line-height:1.7}
-.sys-flow{text-align:center;font-weight:800;color:var(--teal);margin:4px 0 0;font-size:15px}
+/* cards */
+.grid{display:grid;gap:14px;margin-top:18px;grid-template-columns:1fr}
+@media(min-width:640px){.grid.cols2{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm)}
+.alt .card{background:var(--bg)}
+.card h3{margin-bottom:6px}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.card .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:10px}
 
-/* reviews */
-.reviews-sec{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.rev-grid{display:grid;gap:14px;margin-top:18px;grid-template-columns:1fr}
-@media(min-width:700px){.rev-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.rev-grid{grid-template-columns:1fr 1fr 1fr}}
-.rev-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--shadow-sm)}
-.rev-card a{display:block;border-radius:10px;overflow:hidden}
-.rev-card img{width:100%;max-width:360px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
-.rev-note{text-align:center;color:var(--mute);font-size:13.5px;margin-top:14px}
-
-/* product preview */
-.pv-grid{display:grid;gap:14px;margin-top:18px;grid-template-columns:1fr}
-@media(min-width:700px){.pv-grid{grid-template-columns:1fr 1fr}}
-.pv-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--shadow-sm)}
-.pv-card a{display:block;border-radius:10px;overflow:hidden;background:#fff}
-.pv-card img{width:100%;max-width:420px;height:auto;display:block;margin-inline:auto;border-radius:10px;border:1px solid var(--line)}
-.pv-cap{font-size:15.5px;margin:10px 4px 2px}
-.pv-cap b{display:block;font-size:16.5px}
-.pv-cap span{color:var(--mute);font-size:14.5px}
+/* steps */
+.steps{list-style:none;padding:0;margin:16px 0 0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 16px 66px;margin-bottom:10px;box-shadow:var(--shadow-sm)}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px}
+.steps li b{display:block;font-size:17px;margin-bottom:2px}
+.steps li span{color:var(--mute);font-size:15.5px}
 
 /* offer */
-.offer{background:var(--card);border:3px solid var(--teal);border-radius:22px;padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
-.offer-list{list-style:none;padding:0;margin:14px 0;text-align:right}
-.offer-list li{padding:9px 40px 9px 0;position:relative;border-bottom:1px dashed var(--line);font-size:16px}
-.offer-list li:last-child{border-bottom:0}
-.offer-list li::before{content:"✓";position:absolute;right:4px;top:9px;width:26px;height:26px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-weight:900}
-
-/* payment */
-.pay-steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0}
-.pay-steps li{counter-increment:s;position:relative;padding:8px 56px 16px 0;font-size:16.5px}
-.pay-steps li::before{content:counter(s);position:absolute;right:0;top:6px;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;box-shadow:0 4px 0 rgba(0,0,0,.15)}
-.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0;box-shadow:var(--shadow-sm)}
-.box h3{font-size:17px;margin-bottom:4px}
-.row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
-.val{flex:1;min-width:190px;direction:ltr;text-align:left;background:#eef6f2;border:2px dashed var(--teal);border-radius:12px;padding:11px 14px;font:800 18px/1.3 ui-monospace,Menlo,Consolas,monospace;user-select:all;word-break:break-all;color:#0a3d34}
-.cp{background:var(--teal);color:#fff;border:0;border-radius:11px;padding:12px 20px;font:800 15.5px Cairo,sans-serif;cursor:pointer;min-width:88px}
-.cp.ok{background:var(--wa)}
-.wa{background:var(--wa);box-shadow:0 6px 0 rgba(0,0,0,.2)}
-.wa:active{box-shadow:0 2px 0 rgba(0,0,0,.2)}
-.wa small{display:block;font-size:13px;font-weight:600;opacity:.92}
-.payhint{font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.offer{background:var(--card);border:2px solid var(--teal);border-radius:16px;padding:26px 22px;text-align:center;box-shadow:var(--shadow-sm)}
+.offer .price{font-size:56px;font-weight:800;color:var(--teal);line-height:1.1;margin:6px 0 2px}
+.offer .price small{font-size:20px;font-weight:700}
 
 /* faq */
-details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
-summary{font-weight:800;cursor:pointer;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-size:20px;font-weight:900}
+summary::after{content:"+";width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-size:19px;font-weight:800}
 details[open] summary::after{content:"–"}
 details p{margin:10px 0 0;color:var(--mute);font-size:15.5px}
-footer{text-align:center;color:var(--mute);font-size:13.5px;padding:26px 18px 10px}
+footer{text-align:center;color:var(--mute);font-size:14px;padding:28px 20px 12px}
 
-/* sticky bar + float + toast */
-.bar{position:fixed;inset-inline:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
-.bar .btn{width:auto;flex:1;max-width:430px;padding:12px;font-size:17px}
-.bar-price{text-align:center;line-height:1.2;font-weight:900;font-size:16px;color:var(--teal);white-space:nowrap}
-.float-wa{position:fixed;bottom:86px;left:14px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 22px rgba(31,170,85,.45);font-size:28px}
-#t{position:fixed;top:14px;inset-inline:0;margin:auto;width:max-content;max-width:92%;background:#111;color:#fff;padding:11px 22px;border-radius:30px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;z-index:99;font-size:15px}
-#t.on{opacity:1}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;box-shadow:0 -6px 20px rgba(0,0,0,.07)}
+.bar .btn{width:auto;flex:1;max-width:440px;padding:12px;font-size:16px}
+.bar-price{font-weight:800;color:var(--teal);white-space:nowrap}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1783713612490810');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
 
-<div class="topbar">لطلاب الثانوية العامة</div>
-
-<div class="hdr">
+<header class="hdr">
   <div class="hdr-in">
-    <div class="logo"><span class="brand">Bondly Club</span><span class="sub-brand">نظام المذاكرة اللي يخلّيك تتقدم</span></div>
-    <div style="display:flex;align-items:center;gap:12px">
-      <div class="hdr-price"><span data-p>49</span> ج</div>
-      <a class="hdr-cta" href="#pay">اطلب النظام</a>
-    </div>
+    <div class="brand">Bondly Club</div>
+    <a class="hdr-cta" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system">Get the System</a>
   </div>
-</div>
-
-<header class="hero w">
-  <p class="pname">نظام المذاكرة اللي يخلّيك تتقدم</p>
-  <span class="badge">لطلاب الثانوية العامة</span>
-  <h1>بتذاكر، بس مش حاسس إنك بتتقدم؟</h1>
-  <p class="sub">نظّم مذاكرتك، تابع أخطاءك، واعرف إيه اللي محتاج تراجعه — بنظام عملي يساعدك تعرف هتعمل إيه وإيه الخطوة اللي بعدها.</p>
-  <p class="format">27 صفحة عملية تساعدك تخطط، تذاكر بتركيز، تتابع أخطاءك، وتنظّم مراجعتك.</p>
-  <div class="price-big"><span data-p>49</span> <small>جنيه</small></div>
-  <a class="btn" href="#pay">عايز أبدأ أذاكر بنظام</a>
-  <p class="under-cta">الدفع بالمحافظ الإلكترونية أو InstaPay • الاستلام على واتساب</p>
-  <a class="secondary" href="#preview">بص جوه الخطة ↓</a>
 </header>
 
-<section class="w reveal">
-  <h2>بتخلص يومك في المذاكرة، بس مش عارف وصلت لفين؟</h2>
-  <p class="mute">يمكن بتقعد بالساعات قدام الكتب، وبتحاول تخلّص اللي عليك، لكن لما تيجي تراجع تلاقي حاجات نسيتها، وأسئلة بتغلط فيها أكتر من مرة، ومش عارف إذا كانت مذاكرتك فعلًا بتجيب نتيجة ولا لأ.</p>
-  <p class="mute">ويمكن تعمل جدول بحماس، وبعد كام يوم تلاقي نفسك رجعت للعشوائية تاني.</p>
-  <p>المشكلة مش بالضرورة إنك مش بتبذل مجهود. أحيانًا أنت محتاج طريقة أوضح تنظّم بيها شغلك وتعرف إيه اللي محتاج اهتمام.</p>
-  <ul class="chk x">
-    <li>مش عارف تبدأ بإيه كل يوم.</li>
-    <li>بتنسى أجزاء من اللي ذاكرتها.</li>
-    <li>بتكرر أخطاء في الأسئلة.</li>
-    <li>بتعمل جدول ومش بتعرف تلتزم بيه.</li>
-    <li>مش عارف إيه اللي محتاج مراجعة فعلًا.</li>
-    <li>بتحس إنك مشغول، لكن مش شايف تقدم واضح.</li>
+<main>
+<section class="hero wrap">
+  <span class="eyebrow">FOR RESIDENTIAL CLEANING BUSINESSES</span>
+  <h1>Sent a Quote? Know What to Do Next.</h1>
+  <p class="sub">You sent a price to a potential customer. Now what? This simple follow-up system helps you keep track of your quotes, know when to follow up, and decide what to say.</p>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system">Get the Follow-Up System — $19</a>
+  <p class="btn-note">One-time payment. Digital product.</p>
+</section>
+
+<section class="wrap">
+  <h2>Sending the Quote Is Only Step One</h2>
+  <p>You send a quote. Then the day gets busy.</p>
+  <p>You may wonder:</p>
+  <ul class="ticks">
+    <li>Who still needs a reply?</li>
+    <li>When should you follow up?</li>
+    <li>What should you say?</li>
+    <li>Did you already contact this person?</li>
   </ul>
+  <p style="margin-top:14px">It is easy to lose track when everything lives in your head. You need a simple way to keep your next steps clear.</p>
 </section>
 
-<section class="w reveal">
-  <div class="big-idea">
-    <h2>مش المطلوب إنك تزوّد ساعات المذاكرة وخلاص</h2>
-    <p>المهم كمان إنك تعرف هتذاكر إيه، وهتتابع شغلك إزاي، وهتتعامل مع أخطائك ومراجعتك بطريقة منظمة.</p>
-    <p>بدل ما تعتمد على إحساسك أو تحاول تبدأ من الصفر كل يوم، يبقى عندك نظام ترجع له وتعرف الخطوة الجاية.</p>
+<section class="alt"><div class="wrap">
+  <h2>A Simple Way to Follow Up</h2>
+  <p>The Cleaning Business Quote Follow-Up System gives you tools to manage the next steps after sending a quote.</p>
+  <p>Use it to keep your follow-ups in order, choose your next action, and save time when writing messages.</p>
+  <p class="mute" style="font-size:15px">Note: you send your own messages. The system organizes the work. It does not contact customers for you.</p>
+</div></section>
+
+<section class="wrap">
+  <h2>Everything You Need to Get Started</h2>
+  <div class="grid cols2">
+    <div class="card"><h3>Quote Follow-Up Message Kit</h3><p>Use ready-to-adapt message examples when you need to contact someone about a quote.</p></div>
+    <div class="card"><h3>Follow-Up Action Guide</h3><p>Use a simple guide to help you decide what to do next.</p></div>
+    <div class="card"><h3>Quote Follow-Up Tracker</h3><p>Keep quote details and follow-up steps organized in a spreadsheet.</p></div>
+    <div class="card"><h3>Five-Quote Quick Start</h3><p>Start by using the system with five quotes.</p></div>
   </div>
 </section>
 
-<section class="w reveal" id="system">
-  <h2>بدل العشوائية، امشِ على خطوات واضحة</h2>
-  <p class="mute">مش شوية ورق متفرق. ده نظام واحد: كل خطوة بتسلّم للي بعدها.</p>
+<section class="alt"><div class="wrap">
+  <h2>Start in Three Simple Steps</h2>
   <ol class="steps">
-    <li><b>01 — اعرف موقفك</b><span>قيّم موادك وحدد موقفك الحالي قبل ما تبني خطتك.</span></li>
-    <li><b>02 — ابنِ خطتك</b><span>نظّم المطلوب منك في خطة يومية وأسبوعية تقدر ترجع لها.</span></li>
-    <li><b>03 — ذاكر بتركيز</b><span>حدّد هدف جلسة المذاكرة واشتغل من خلال إطار واضح.</span></li>
-    <li><b>04 — حلّل أخطاءك</b><span>سجّل الأخطاء اللي بتتكرر وحدد إيه اللي محتاج تراجعه أو تفهمه بشكل أفضل.</span></li>
-    <li><b>05 — نظّم مراجعتك</b><span>استخدم جدول يساعدك تحدد إيه اللي محتاج ترجع له ومتى.</span></li>
-    <li><b>06 — تابع وعدّل</b><span>راجع شغلك أسبوعيًا وعدّل خطتك بناءً على اللي حصل فعلًا.</span></li>
+    <li><b>Add Your Quotes</b><span>Start with the quotes you have already sent.</span></li>
+    <li><b>Check Your Next Step</b><span>Use the guide and tracker to see which quotes need attention.</span></li>
+    <li><b>Send Your Follow-Up</b><span>Adapt a message from the kit and contact the potential customer.</span></li>
   </ol>
-  <p class="sys-flow">↓ خطوة واحدة بتسلّم للي بعدها ↓</p>
-</section>
-
-<section class="w reveal" id="preview">
-  <h2>شوف بنفسك إيه اللي هتستخدمه</h2>
-  <p class="mute">دي صفحات حقيقية من النظام. بص عليها وشوف إذا كانت طريقة الاستخدام مناسبة ليك قبل ما تطلبه.</p>
-  <div class="pv-grid">
-    <div class="pv-card"><a href="preview-1-know-your-position.jpg" target="_blank" rel="noopener"><img src="preview-1-know-your-position.jpg" alt="صفحة اعرف موقفك: جدول تقييم المواد ومستواك في كل مادة" width="640" height="896" loading="lazy"></a><p class="pv-cap"><b>اعرف موقفك</b><span>حدد أنت واقف فين قبل ما تبني خطتك.</span></p></div>
-    <div class="pv-card"><a href="preview-2-focused-session.jpeg" target="_blank" rel="noopener"><img src="preview-2-focused-session.jpeg" alt="صفحة جلسة المذاكرة المركزة: الهدف والمدة وتقييم الجلسة" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>جلسة مذاكرة مركزة</b><span>ادخل كل جلسة وأنت عارف المطلوب منك.</span></p></div>
-    <div class="pv-card"><a href="preview-3-mistakes-log.jpeg" target="_blank" rel="noopener"><img src="preview-3-mistakes-log.jpeg" alt="صفحة سجل الأخطاء: سبب كل غلطة وخطة إصلاحها ومواعيد مراجعتها" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>سجل الأخطاء</b><span>اعرف أخطاءك المتكررة بدل ما تكررها.</span></p></div>
-    <div class="pv-card"><a href="preview-4-smart-review.jpeg" target="_blank" rel="noopener"><img src="preview-4-smart-review.jpeg" alt="صفحة المراجعة الذكية: جدول مواعيد المراجعة لكل موضوع" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>المراجعة الذكية</b><span>نظم مراجعتك بدل ما تعتمد على إنك تفتكر لوحدك.</span></p></div>
-  </div>
-  <p class="mute" style="margin-top:12px;font-size:14.5px">دوس على أي صفحة عشان تشوفها بحجمها الكامل.</p>
-</section>
-
-<section class="reviews-sec reveal"><div class="w">
-  <h2 style="text-align:center">ناس جرّبت النظام قالت إيه؟</h2>
-  <div class="rev-grid">
-    <div class="rev-card"><a href="review-1.jpg.jpeg" target="_blank" rel="noopener"><img src="review-1.jpg.jpeg" alt="رسالة من مشتري الخطة: الكتاب جميل جدًا وساعده ينجز حاجات كتير ويحسّن الإنتاجية في المذاكرة" width="720" height="295" loading="lazy"></a></div>
-    <div class="rev-card"><a href="review-2.jpg.jpeg" target="_blank" rel="noopener"><img src="review-2.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة كويسة وساعدته يوفّر وقته ويعرف يذاكر إيه كل يوم" width="1013" height="493" loading="lazy"></a></div>
-    <div class="rev-card"><a href="review-3.jpg.jpeg" target="_blank" rel="noopener"><img src="review-3.jpg.jpeg" alt="رسالة من مشتري الخطة: الخطة ساعدته ينظّم وقته بعد ما كان متلخبط" width="889" height="342" loading="lazy"></a></div>
-  </div>
-  <p class="rev-note">آراء حقيقية من مستخدمين، نُشرت بموافقتهم.</p>
-  <p class="rev-note">لو عندك سؤال عن محتويات الملف أو طريقة استلامه، تقدر تتواصل معانا على واتساب.</p>
+  <p class="mute" style="margin-top:12px">Start with five quotes. Learn the process as you go.</p>
 </div></section>
 
-<section class="w reveal">
+<section class="wrap">
+  <h2>Made for Busy Cleaning Business Owners</h2>
+  <p>This system may be a good fit if:</p>
+  <ul class="ticks">
+    <li>You run a residential cleaning business.</li>
+    <li>You send quotes to potential customers.</li>
+    <li>You sometimes forget to follow up.</li>
+    <li>You want a clear process for your next steps.</li>
+    <li>You prefer simple tools over complex software.</li>
+  </ul>
+  <p class="mute" style="margin-top:12px;font-size:15px">This is a digital product for you to use in your business.</p>
+</section>
+
+<section class="wrap">
   <div class="offer">
-    <h2>ابدأ تنظّم مذاكرتك بنظام واضح</h2>
-    <p class="mute">لو محتاج طريقة تساعدك تخطط، وتتابع أخطاءك، وتنظّم مراجعتك، فالنظام ده معمول عشان يوفرلك أدوات عملية تستخدمها في مذاكرتك.</p>
-    <p style="font-weight:900;font-size:19px;margin:12px 0 0">نظام المذاكرة اللي يخلّيك تتقدم</p>
-    <div class="price-big"><span data-p>49</span> <small>جنيه — دفعة واحدة</small></div>
-    <ul class="offer-list">
-      <li>ملف PDF من 27 صفحة عملية.</li>
-      <li>تخطيط ومتابعة للمذاكرة.</li>
-      <li>أدوات لتنظيم جلسات المذاكرة والأخطاء والمراجعة.</li>
-      <li>متابعة أسبوعية لمدة تصل إلى 9 أسابيع.</li>
+    <h2>Get Your Quotes Back on Your Radar</h2>
+    <p class="mute">Get the Cleaning Business Quote Follow-Up System for a one-time payment of $19.</p>
+    <div class="price">$19</div>
+    <ul class="ticks" style="text-align:left">
+      <li>Quote Follow-Up Message Kit</li>
+      <li>Follow-Up Action Guide</li>
+      <li>Quote Follow-Up Tracker</li>
+      <li>Five-Quote Quick Start</li>
     </ul>
-    <a class="btn" href="#pay">اطلب النظام بـ<span data-p>49</span> جنيه</a>
+    <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system" style="margin-top:16px">Get the System — $19</a>
+    <p class="btn-note">One-time payment. No recurring product fee is advertised.</p>
   </div>
 </section>
 
-<section class="alt" id="pay"><div class="w reveal">
-  <h2>تطلبه إزاي؟</h2>
-  <ol class="pay-steps">
-    <li><b>حوّل <span data-p>49</span> جنيه بالطريقة المناسبة ليك.</b></li>
-    <li><b>اتأكد من اسم المستلم والمبلغ قبل تأكيد التحويل.</b></li>
-    <li><b>ابعت صورة التحويل على واتساب.</b> بعد التأكد من الدفع، هنبعتلك ملف PDF على واتساب.</li>
-  </ol>
-
-  <div class="box">
-    <h3>⚡ انستا باي (InstaPay)</h3>
-    <a class="btn" id="ipn" href="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" target="_blank" rel="noopener noreferrer" style="margin-top:10px;font-size:17px">ادفع <span data-p>49</span> جنيه بإنستا باي</a>
-    <div class="row"><button class="cp" data-c="https://ipn.eg/S/ahmedjomaa8432/instapay/8eclBV" style="flex:1">نسخ الرابط</button></div>
-    <div class="mute" style="font-size:15px;margin-top:10px">أو امسح الكود ده من تطبيق إنستا باي:</div>
-    <div style="background:#fff;border-radius:14px;padding:14px;margin-top:8px;text-align:center"><img src="instapay-qr.jpg" alt="كود QR للدفع عبر إنستا باي" width="516" height="552" loading="lazy" style="width:220px;height:auto;max-width:100%;display:inline-block;border-radius:8px"></div>
-    <div class="mute" style="font-size:14px;margin-top:10px">الاسم: <b>Ahmed Gomaa</b> — اتأكد إن الاسم اللي ظاهر هو Ahmed Gomaa والمبلغ <b><span data-p>49</span> جنيه</b> قبل ما تأكد.</div>
-  </div>
-
-  <div class="box">
-    <h3>📱 حوّل على المحفظة الإلكترونية</h3>
-    <div class="mute" style="font-size:15px">فودافون كاش / أورنج كاش / e&amp; money</div>
-    <div class="mute" style="font-size:15px;margin-top:6px">رقم المحفظة: <b dir="ltr">01552268432</b></div>
-    <div class="mute" style="font-size:15px">اسم المستلم: <b>Ahmed Gomaa</b></div>
-    <div class="row"><div class="val">01552268432</div><button class="cp" data-c="01552268432">نسخ رقم المحفظة</button></div>
-  </div>
-
-  <div class="box">
-    <h3>💬 إرسال إثبات التحويل والاستفسارات</h3>
-    <div class="mute" style="font-size:15px;margin-top:6px">رقم واتساب: <b dir="ltr">+20 150 045 5750</b></div>
-    <a class="btn wa" id="wa2" href="#" target="_blank" rel="noopener" style="margin-top:10px">ابعت صورة التحويل على واتساب</a>
-    <div class="mute" style="font-size:14px;margin-top:10px">بعد التحويل، ابعت صورة إثبات الدفع على واتساب. هنتأكد من الدفع، وبعدها هنبعتلك ملف PDF.</div>
-  </div>
-
-  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 ابعت صورة التحويل على واتساب</a>
-  <p class="mute" style="text-align:center;font-size:14px;margin-top:10px">هيتفتح واتساب على رقم <b dir="ltr">+20 150 045 5750</b> برسالة جاهزة.</p>
+<section class="alt"><div class="wrap">
+  <h2>Common Questions</h2>
+  <details open><summary>Who is this for?</summary><p>It is made for residential cleaning business owners who send quotes to potential customers.</p></details>
+  <details><summary>What do I get?</summary><p>You get the message kit, action guide, quote tracker, and Five-Quote Quick Start.</p></details>
+  <details><summary>Does it send follow-up messages for me?</summary><p>No automatic sending is promised. You use the tools to organize your follow-ups and send your own messages.</p></details>
+  <details><summary>How much does it cost?</summary><p>The listed price is $19, paid once.</p></details>
+  <details><summary>Do I need special software?</summary><p>The quote tracker is a spreadsheet. Open it in the spreadsheet app you already use. No special software is required.</p></details>
+  <details><summary>Will it guarantee more customers?</summary><p>No. The system gives you a clearer way to manage quote follow-ups, but results depend on your business and your customers.</p></details>
 </div></section>
 
-<section class="w reveal">
-  <h2>عندك سؤال؟</h2>
-  <details open><summary>هل ده كتاب شرح للمنهج؟</summary><p>لأ. ده نظام عملي لتنظيم المذاكرة ومتابعة التخطيط والأخطاء والمراجعة. هتستخدمه مع كتبك ومدرسيك ومصادرك المعتادة.</p></details>
-  <details><summary>هل ينفع مع كل مواد الثانوية العامة؟</summary><p>النظام مصمم عشان تقدر تنظّم بيه مواد مختلفة، وتقيّم موقفك في كل مادة وتتابع شغلك عليها.</p></details>
-  <details><summary>هل لازم أطبع الملف؟</summary><p>الطباعة هي الطريقة الأفضل لاستخدام الصفحات والكتابة فيها، لكن تقدر تنقل الجداول على كراسة لو مش هتطبع.</p></details>
-  <details><summary>هل النظام يضمن إني أجيب درجات أعلى؟</summary><p>مفيش نظام يقدر يضمن درجة معينة؛ لأن النتيجة مرتبطة بعوامل كتير، منها مستواك والتزامك وطريقة مذاكرتك. النظام بيوفر لك أدوات تساعدك تخطط وتتابع أخطاءك ومراجعتك وتعدّل شغلك.</p></details>
-  <details><summary>هستلم المنتج إزاي؟</summary><p>بعد تحويل المبلغ وإرسال إثبات التحويل على واتساب، هنبعتلك ملف PDF بعد التأكد من الدفع.</p></details>
-  <details><summary>هل فيه اشتراك شهري؟</summary><p>لأ. بتدفع مرة واحدة، والملف بيبقى معاك.</p></details>
-  <details><summary>هل أقدر أسأل لو عندي مشكلة في الاستلام؟</summary><p>لو عندك سؤال عن الملف أو طريقة الاستلام، تقدر تتواصل معانا على واتساب.</p></details>
+<section class="wrap" style="text-align:center">
+  <h2>Ready to Get Your Follow-Ups in Order?</h2>
+  <p class="mute">Start with five quotes and use the system to plan your next steps.</p>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system" style="margin-top:12px">Get the Follow-Up System — $19</a>
+  <p class="btn-note">One-time payment. Digital product.</p>
 </section>
+</main>
 
-<section class="w reveal" style="text-align:center">
-  <h2>خلي مذاكرتك أوضح، خطوة بخطوة</h2>
-  <p class="mute">ابدأ بخطة تقدر ترجع لها، وتابع شغلك بدل ما تضطر تبدأ من الصفر كل يوم.</p>
-  <p style="font-weight:900;font-size:19px">نظام المذاكرة اللي يخلّيك تتقدم</p>
-  <div class="price-big"><span data-p>49</span> <small>جنيه فقط</small></div>
-  <a class="btn" href="#pay" style="margin-top:12px">اطلب النظام دلوقتي — <span data-p>49</span> جنيه</a>
-</section>
-
-<footer>© Bondly Club<br>واتساب: <b dir="ltr">+20 150 045 5750</b></footer>
+<footer>© Bondly Club — Cleaning Business Quote Follow-Up System</footer>
 
 <div class="bar">
-  <div class="bar-price">نظام المذاكرة — <span data-p>49</span> جنيه</div>
-  <a class="btn" href="#pay">اطلب الآن</a>
+  <div class="bar-price">$19 one time</div>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system">Get the System</a>
 </div>
 
-<a class="float-wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="تواصل واتساب">✆</a>
-<div id="t" role="status">تم النسخ ✓</div>
-
-<script>
-var PRICE = 49, WA = "201500455750";
-var fired={};
-function tr(n){try{if(!window.fbq||fired[n])return;fired[n]=1;fbq("track",n,{value:PRICE,currency:"EGP",content_name:"خطة مذاكرة الثانوية العامة"})}catch(e){}}
-tr("ViewContent");
-document.querySelectorAll("[data-p]").forEach(function(e){ e.textContent = PRICE; });
-var msg = "السلام عليكم، حوّلت " + PRICE + " جنيه لخطة مذاكرة الثانوية العامة وده سكرين التحويل.";
-var waUrl = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
-document.getElementById("wa").href = waUrl;
-document.getElementById("waFloat").href = waUrl;
-document.getElementById("wa2").href = waUrl;
-document.querySelectorAll('a[href="#pay"]').forEach(function(a){
-  a.addEventListener("click", function(){ tr("InitiateCheckout"); });
-});
-document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
-document.getElementById("wa2").addEventListener("click", function(){ tr("Lead"); });
-document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
-document.getElementById("ipn").addEventListener("click", function(){ tr("AddPaymentInfo"); });
-function ok(b){
-  tr("AddPaymentInfo");
-  if(!b.dataset.t)b.dataset.t=b.textContent;
-  var t = document.getElementById("t");
-  t.classList.add("on");
-  b.textContent = "تم ✓"; b.classList.add("ok");
-  setTimeout(function(){ t.classList.remove("on"); b.textContent = b.dataset.t; b.classList.remove("ok"); }, 1800);
-}
-function fb(txt){
-  var a = document.createElement("textarea");
-  a.value = txt; a.style.cssText = "position:fixed;opacity:0";
-  document.body.appendChild(a); a.select();
-  try { a.setSelectionRange(0, 99999); } catch(e){}
-  var r = false; try { r = document.execCommand("copy"); } catch(e){}
-  document.body.removeChild(a); return r;
-}
-document.querySelectorAll(".cp").forEach(function(b){
-  b.addEventListener("click", function(){
-    var v = b.getAttribute("data-c");
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(v).then(function(){ ok(b); }, function(){ if (fb(v)) ok(b); });
-    } else if (fb(v)) { ok(b); }
-    else {
-      var s = b.previousElementSibling, r = document.createRange();
-      r.selectNodeContents(s); var g = getSelection();
-      g.removeAllRanges(); g.addRange(r); ok(b);
-    }
-  });
-});
-
-// fire InitiateCheckout once when payment section is viewed
-if ("IntersectionObserver" in window) {
-  var paySec = document.getElementById("pay");
-  if (paySec) {
-    var pio = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) { tr("InitiateCheckout"); pio.disconnect(); } });
-    }, { threshold: .3 });
-    pio.observe(paySec);
-  }
-}
-
-// reveal on scroll
-if ("IntersectionObserver" in window) {
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-  }, { threshold: .12 });
-  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
-} else {
-  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
-}
-</script>
 </body>
 </html>
