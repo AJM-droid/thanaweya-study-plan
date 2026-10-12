@@ -3,61 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cleaning Quote Follow-Up System | Bondly Club</title>
-<meta name="description" content="A simple follow-up system for US residential cleaning businesses. Track your quotes, know when to follow up, and decide what to say. One-time payment of $19.">
-<meta property="og:title" content="Sending Quotes but Not Hearing Back?">
-<meta property="og:description" content="The Cleaning Business Quote Follow-Up System: message kit, action guide, quote tracker, and Five-Quote Quick Start. $19 one time.">
+<title>Cleaning Business Quote Follow-Up Kit | Bondly Club</title>
+<meta name="description" content="A practical follow-up kit for US residential cleaning businesses. Keep track of open quotes, plan your next follow-up, and organize customer replies. One-time payment of $19.">
+<meta property="og:title" content="Every quote deserves a follow-up.">
+<meta property="og:description" content="The Cleaning Business Quote Follow-Up Kit: message kit, action guide, quote tracker, and Five-Quote Quick Start. $19 one time.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d1d1f'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>B</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231B1A17'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='%23FAF5E8' font-family='Georgia,serif' font-weight='700'>B</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#FFFFFF; --band:#F5F5F7; --ink:#1D1D1F; --mute:#515154;
-  --teal:#1d1d1f; --teal-dark:#000000; --teal-light:#f5f5f7;
-  --line:#D2D2D7; --accent:#0071E3; --focus:#0071E3;
-  --dark:#1D1D1F; --dark-mute:#A7A7AB;
-  --radius:20px;
-  --shadow-sm:none;
+  --primary:#1B1A17; --secondary:#5C5A54; --tertiary:#9C3B1B;
+  --neutral:#F5EFE1; --surface:#FAF5E8; --on-primary:#FAF5E8;
+  --line:rgba(27,26,23,.16);
+  --space-s:8px; --space-m:16px; --space-l:32px;
+  --radius-s:2px; --radius-m:4px; --radius-l:8px;
   --max:960px;
   --sec-pad:clamp(48px,7vw,80px);
   --bar-h:72px;
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font);padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--surface);color:var(--primary);font:400 16px/1.6 var(--serif);padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased;overflow-x:hidden}
 @media(min-width:700px){body{font-size:17px}}
-h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-0.02em}
-h1{font-size:clamp(36px,30px + 3vw,54px);font-weight:800}
+h1,h2,h3{margin:0;font-family:var(--serif);line-height:1.15;letter-spacing:-0.01em}
+h1{font-size:clamp(36px,30px + 3vw,54px);font-weight:700}
 h2{font-size:clamp(24px,20px + 1.4vw,30px);font-weight:700;margin:0 0 14px}
-h3{font-size:clamp(17px,16px + .5vw,19px);font-weight:700}
+h3{font-size:clamp(17px,16px + .5vw,19px);font-weight:600}
 p{margin:0 0 12px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 @media(min-width:700px){.wrap{padding:0 24px}}
 @media(min-width:1024px){.wrap{padding:0 32px}}
 section{padding:var(--sec-pad) 0}
 section[id],div[id]{scroll-margin-top:76px}
-.mute{color:var(--mute)}
-:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.mute{color:var(--secondary)}
+:focus-visible{outline:3px solid var(--tertiary);outline-offset:3px;border-radius:var(--radius-s)}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid var(--line)}
+.hdr{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
 .hdr-in{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 @media(min-width:700px){.hdr-in{padding:12px 24px}}
 @media(min-width:1024px){.hdr-in{padding:12px 32px}}
-.brand{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-0.01em;white-space:nowrap}
+.brand{font:700 17px var(--sans);color:var(--primary);letter-spacing:-0.01em;white-space:nowrap}
 .hdr-nav{display:none;gap:26px;margin-left:auto;margin-right:26px}
-.hdr-nav a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;padding:4px 0}
-.hdr-nav a:hover{color:var(--accent)}
+.hdr-nav a{font:600 15px/1.4 var(--sans);color:var(--primary);text-decoration:none;padding:4px 0}
+.hdr-nav a:hover{color:var(--tertiary)}
 @media(min-width:700px){.hdr-nav{display:flex}}
 
 /* hero: mobile-first comfortable composition; desktop restored at 768px+ */
 .hero{padding-top:36px;padding-bottom:40px;text-align:left}
-.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;line-height:1.5;color:var(--mute);margin-bottom:14px}
-.hero h1{font-size:clamp(32px,8.5vw,38px);line-height:1.12;letter-spacing:-0.035em;max-width:100%;margin:0 0 18px;text-wrap:balance}
+.eyebrow{display:block;font:700 12px/1.5 var(--sans);letter-spacing:1.4px;color:var(--secondary);margin-bottom:14px}
+.hero h1{font-size:clamp(32px,8.5vw,38px);line-height:1.12;letter-spacing:-0.01em;max-width:100%;margin:0 0 18px;text-wrap:balance}
 .hero h1 br{display:none}
 @media(min-width:700px){.hero h1 br{display:block}}
-.hero .lead{font-size:17px;line-height:1.6;color:var(--ink);max-width:34em;margin:0 0 14px}
-.hero .sub{font-size:16px;line-height:1.6;color:var(--mute);max-width:36em}
+.hero .lead{font-size:17px;line-height:1.6;color:var(--primary);max-width:34em;margin:0 0 14px}
+.hero .sub{font-size:16px;line-height:1.6;color:var(--secondary);max-width:36em}
 @media(min-width:700px){.hero .sub{font-size:17px}}
 .hero .sub:last-of-type{margin-bottom:0}
 .hero .btn{margin-top:24px;width:100%}
@@ -65,33 +68,33 @@ section[id],div[id]{scroll-margin-top:76px}
 @media(min-width:768px){
   .hero{padding-top:clamp(44px,6vw,72px);padding-bottom:clamp(44px,5vw,64px)}
   .eyebrow{margin-bottom:16px}
-  .hero h1{font-size:clamp(48px,30px + 3vw,54px);line-height:1.15;letter-spacing:-0.02em;max-width:12em;margin-bottom:20px}
+  .hero h1{font-size:clamp(48px,30px + 3vw,54px);line-height:1.15;max-width:12em;margin-bottom:20px}
   .hero .lead{font-size:18px;line-height:1.55}
 }
-.btn,.hdr-cta{--btn-r:9999px;--btn-face:#1d1d1f;--btn-edge:#000000;--btn-ink:#ffffff;display:block;background:var(--btn-edge);border:0;border-radius:var(--btn-r);padding:0;text-align:center;text-decoration:none;cursor:pointer;max-width:100%}
-.btn .button_top,.hdr-cta .button_top{display:block;box-sizing:border-box;background:var(--btn-face);color:var(--btn-ink);border:2px solid var(--btn-edge);border-radius:var(--btn-r);padding:.78em 1.4em;font:700 17px/1.4 var(--font);transform:translateY(-.22em);transition:transform .12s ease;white-space:normal}
-.btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.3em)}
-.btn:active .button_top,.hdr-cta:active .button_top{transform:translateY(0)}
-.btn:focus-visible,.hdr-cta:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.btn,.hdr-cta{display:block;background:var(--tertiary);border:0;border-radius:var(--radius-m);padding:0;text-align:center;text-decoration:none;cursor:pointer;max-width:100%;transition:filter .12s ease}
+.btn .button_top,.hdr-cta .button_top{display:block;box-sizing:border-box;background:transparent;border:0;border-radius:var(--radius-m);padding:12px 20px;font:700 17px/1.4 var(--sans);color:var(--on-primary);white-space:normal}
+.btn:hover,.hdr-cta:hover{filter:brightness(.93)}
+.btn:active,.hdr-cta:active{filter:brightness(.85)}
+.btn:focus-visible,.hdr-cta:focus-visible{outline:3px solid var(--tertiary);outline-offset:3px}
 .hdr-cta{width:auto;flex-shrink:0}
-.hdr-cta .button_top{padding:.5em 1.2em;font-size:14px}
+.hdr-cta .button_top{padding:8px 16px;font-size:14px}
 .bar .btn{width:auto;flex:1;max-width:440px}
-.bar .btn .button_top{padding:.68em 1.2em;font-size:16px}
-@media(prefers-reduced-motion:reduce){.btn .button_top,.hdr-cta .button_top{transition:none}.btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.22em)}.btn:active .button_top,.hdr-cta:active .button_top{transform:translateY(-.22em)}}
-.btn-note{font-size:13px;line-height:1.5;color:var(--mute);margin-top:10px}
+.bar .btn .button_top{padding:10px 20px;font-size:16px}
+@media(prefers-reduced-motion:reduce){.btn,.hdr-cta{transition:none}.btn:hover,.hdr-cta:hover{filter:none}.btn:active,.hdr-cta:active{filter:none}}
+.btn-note{font:400 13px/1.5 var(--sans);color:var(--secondary);margin-top:10px}
 @media(min-width:700px){.btn-note{font-size:14px}}
 .hero .btn-note{text-align:left}
 @media(min-width:700px){.hero .btn-note{max-width:360px;text-align:center}}
 
 /* lists */
-.alt{background:var(--band)}
+.alt{background:var(--neutral)}
 
 /* editorial rows (outcomes): stacked mobile, 3 balanced columns desktop */
 .edrows{margin:32px 0 0;border-top:1px solid var(--line)}
 .edrow{display:grid;grid-template-columns:1fr;gap:6px;padding:24px 0;border-bottom:1px solid var(--line)}
-.edrow .n{font-size:13px;font-weight:800;color:var(--mute);letter-spacing:.6px}
+.edrow .n{font:700 13px var(--sans);color:var(--secondary);letter-spacing:.6px}
 .edrow h3{font-size:clamp(18px,17px + .4vw,19px);line-height:1.35}
-.edrow p{margin:6px 0 0;color:var(--mute);font-size:16px;line-height:1.6}
+.edrow p{margin:6px 0 0;color:var(--secondary);font-size:16px;line-height:1.6}
 @media(min-width:900px){
   .edrows{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 32px;border-top:0;margin-top:36px}
   .edrow{display:block;border-bottom:0;border-left:1px solid var(--line);padding:0 0 0 28px}
@@ -104,18 +107,18 @@ section[id],div[id]{scroll-margin-top:76px}
 /* product rows (components): stacked mobile, index/title/desc columns desktop */
 .prows{margin:32px 0 0;border-top:1px solid var(--line)}
 .prow{display:grid;grid-template-columns:1fr;gap:4px;padding:24px 0;border-bottom:1px solid var(--line)}
-.prow .idx{font-size:13px;font-weight:800;letter-spacing:1px;color:var(--mute)}
+.prow .idx{font:700 13px var(--sans);letter-spacing:1px;color:var(--secondary)}
 .prow h3{font-size:clamp(18px,17px + .4vw,19px);margin-top:2px;line-height:1.35}
-.prow p{margin:6px 0 0;color:var(--mute);font-size:16px;line-height:1.6}
+.prow p{margin:6px 0 0;color:var(--secondary);font-size:16px;line-height:1.6}
 @media(min-width:760px){.prow{grid-template-columns:56px minmax(180px,240px) 1fr;gap:0 28px;align-items:start;padding:26px 0}.prow p{margin:0}}
 
 /* steps: stacked mobile, horizontal trio desktop with stronger process hierarchy */
 .flow{list-style:none;padding:0;margin:32px 0 0;counter-reset:s}
 .flow li{counter-increment:s;position:relative;padding:22px 0;border-top:1px solid var(--line)}
 .flow li:last-child{border-bottom:1px solid var(--line)}
-.flow .step-n{display:block;font-size:15px;font-weight:800;color:var(--ink);letter-spacing:.6px;margin-bottom:10px}
+.flow .step-n{display:block;font:700 15px var(--sans);color:var(--tertiary);letter-spacing:.6px;margin-bottom:10px}
 .flow li b{display:block;font-size:18px;margin-bottom:6px;letter-spacing:-0.01em}
-.flow li span{color:var(--mute);font-size:16px;line-height:1.6;display:block}
+.flow li span{color:var(--secondary);font-size:16px;line-height:1.6;display:block}
 .flow-note{margin-top:14px;font-size:15px}
 @media(min-width:900px){
   .flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 32px}
@@ -128,22 +131,22 @@ section[id],div[id]{scroll-margin-top:76px}
 .fit{list-style:none;padding:0;margin:20px 0 0}
 .fit li{position:relative;padding:9px 0 9px 30px;font-size:16.5px;line-height:1.6}
 @media(min-width:700px){.fit li{font-size:17px}}
-.fit li::before{content:"✓";position:absolute;left:2px;top:9px;color:var(--mute);font-weight:800;font-size:15px}
+.fit li::before{content:"✓";position:absolute;left:2px;top:9px;color:var(--tertiary);font-weight:700;font-size:15px}
 
-/* offer: dark band */
-.dark{background:var(--dark);color:#fff}
-.dark .mute{color:var(--dark-mute)}
+/* offer: dark band in Paper White ink, cream text, rust action */
+.dark{background:var(--primary);color:var(--on-primary)}
+.dark .mute{color:rgba(250,245,232,.78)}
 .offer{background:transparent;border:0;border-radius:0;padding:4px 0;text-align:center;box-shadow:none;max-width:680px;margin:0 auto}
-.offer h2{color:#fff}
-.offer .price{font-size:clamp(48px,7vw,60px);font-weight:800;color:#fff;line-height:1.1;margin:12px 0 4px;letter-spacing:-0.02em}
+.offer h2{color:var(--on-primary)}
+.offer .price{font-size:clamp(48px,7vw,60px);font-weight:700;color:var(--on-primary);line-height:1.1;margin:12px 0 4px;letter-spacing:-0.01em}
 .offer .incl{list-style:none;padding:0;margin:18px auto 0;text-align:left;max-width:520px}
-.offer .incl li{position:relative;padding:8px 0 8px 32px;font-size:16px;line-height:1.55;color:#f5f5f7;border:0}
-.offer .incl li::before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;font-size:12px}
+.offer .incl li{position:relative;padding:8px 0 8px 30px;font-size:16px;line-height:1.55;color:var(--on-primary);border:0}
+.offer .incl li::before{content:"✓";position:absolute;left:2px;top:8px;color:var(--on-primary);font-weight:700;font-size:15px}
 @media(min-width:760px){.offer .incl{display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;max-width:600px}}
-.btn--light{--btn-face:#ffffff;--btn-edge:#000000;--btn-ink:#1d1d1f}
 .offer .btn{margin:20px auto 0;max-width:360px;width:100%}
-.offer .btn-note{color:var(--dark-mute)}
-.final-price{font-size:40px;font-weight:800;letter-spacing:-0.02em;margin:10px 0 2px}
+.offer .btn:focus-visible{outline-color:var(--on-primary)}
+.offer .btn-note{color:rgba(250,245,232,.78)}
+.final-price{font-size:40px;font-weight:700;letter-spacing:-0.01em;margin:10px 0 2px}
 .final-center{max-width:620px;margin:0 auto;text-align:center}
 .final-center .lede{max-width:38em;margin-left:auto;margin-right:auto}
 .final-center .btn{margin:20px auto 0;max-width:360px;width:100%}
@@ -153,16 +156,16 @@ section[id],div[id]{scroll-margin-top:76px}
 .faq-list{margin-top:26px}
 details{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 2px;margin-bottom:0}
 details:first-of-type{border-top:1px solid var(--line)}
-summary{font-weight:700;cursor:pointer;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.45;min-height:44px}
+summary{font:600 17px/1.45 var(--serif);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";flex-shrink:0;width:24px;text-align:center;color:var(--mute);font-size:22px;font-weight:400;line-height:1}
-details[open] summary::after{content:"–";color:var(--ink)}
-details p{margin:10px 0 4px;color:var(--mute);font-size:16px;line-height:1.6}
-footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:14px;line-height:1.6;padding:28px 20px calc(20px + env(safe-area-inset-bottom,0px))}
+summary::after{content:"+";flex-shrink:0;width:24px;text-align:center;color:var(--tertiary);font-size:22px;font-weight:400;line-height:1}
+details[open] summary::after{content:"–";color:var(--primary)}
+details p{margin:10px 0 4px;color:var(--secondary);font-size:16px;line-height:1.6}
+footer{background:var(--surface);border-top:1px solid var(--line);text-align:center;color:var(--secondary);font:400 14px/1.6 var(--sans);padding:28px 20px calc(20px + env(safe-area-inset-bottom,0px))}
 
-/* sticky bar: viewport-anchored, opaque, never obscures content (body reserves --bar-h) */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#FFFFFF;border-top:1px solid var(--line);box-shadow:0 -1px 8px rgba(0,0,0,.06);min-height:var(--bar-h);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center}
-.bar-price{font-weight:800;color:var(--teal);white-space:nowrap;font-size:15px}
+/* sticky bar: viewport-anchored, cream surface, never obscures content (body reserves --bar-h) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--surface);border-top:1px solid var(--line);min-height:var(--bar-h);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center}
+.bar-price{font:700 15px var(--sans);color:var(--primary);white-space:nowrap}
 .bar .btn{min-height:44px}
 @media(max-width:380px){.bar-price{display:none}}
 @media(max-width:340px){.bar{padding-left:10px;padding-right:10px}.bar .btn .button_top{font-size:15px}}
@@ -175,17 +178,17 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
   <div class="hdr-in">
     <div class="brand">Bondly Club</div>
     <nav class="hdr-nav" aria-label="Page sections"><a href="#top">Home</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></nav>
-    <a class="hdr-cta" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the System</span></a>
+    <a class="hdr-cta" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Kit</span></a>
   </div>
 </header>
 
 <main>
 <section class="hero wrap" id="top">
   <span class="eyebrow">FOR RESIDENTIAL CLEANING BUSINESSES</span>
-  <h1>Sending Quotes but<br> Not Hearing Back?</h1>
+  <h1>Every quote deserves<br> a follow-up.</h1>
   <p class="lead">You send a quote, get busy with work, and wait for a reply. Some customers respond. Others go quiet.</p>
-  <p class="sub">The Cleaning Business Quote Follow-Up System helps you keep track of your quotes, know what to do next, and have a clear message ready when it is time to follow up.</p>
-  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up System — $19</span></a>
+  <p class="sub">Keep track of open cleaning quotes, plan your next follow-up, and organize customer replies with a practical follow-up kit.</p>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up Kit — $19</span></a>
   <p class="btn-note">One-time payment. Digital product.</p>
 </section>
 
@@ -199,7 +202,7 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
 </div></section>
 
 <section class="wrap">
-  <h2>The Complete Follow-Up System</h2>
+  <h2>The Complete Follow-Up Kit</h2>
   <div class="prows">
     <div class="prow"><span class="idx">01</span><h3>Quote Follow-Up Message Kit</h3><p>Ready-to-adapt messages to help you follow up with potential customers after sending a quote.</p></div>
     <div class="prow"><span class="idx">02</span><h3>Follow-Up Action Guide</h3><p>A simple guide to help you work out your next step when a customer has not replied.</p></div>
@@ -229,7 +232,7 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
 
 <section class="dark"><div class="wrap">
   <div class="offer">
-    <h2>Get Your Quote Follow-Up System</h2>
+    <h2>Get Your Quote Follow-Up Kit</h2>
     <p class="mute">Get the tools to organize your quote follow-ups, choose your next step, and prepare your messages.</p>
     <div class="price">$19</div>
     <ul class="incl">
@@ -238,7 +241,7 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
       <li>Quote Follow-Up Tracker</li>
       <li>Five-Quote Quick Start</li>
     </ul>
-    <a class="btn btn--light" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the System — $19</span></a>
+    <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Kit — $19</span></a>
     <p class="btn-note">One-time payment. No recurring products or subscriptions.</p>
   </div>
 </div>
@@ -247,10 +250,10 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
 <section class="alt"><div class="wrap" id="faq">
   <h2>Common Questions</h2>
   <div class="faq-list">
-  <details open><summary>What is the Cleaning Business Quote Follow-Up System?</summary><p>It is a set of tools designed to help residential cleaning business owners organize quote follow-ups, choose their next step, and prepare messages for potential customers.</p></details>
-  <details><summary>Who is this system for?</summary><p>It is designed for residential cleaning business owners who send quotes and want a clearer way to manage follow-ups.</p></details>
-  <details><summary>Will this guarantee more bookings?</summary><p>No. The system can help you organize your follow-up process, but results depend on your business, your quotes, your customers, and other factors.</p></details>
-  <details><summary>Does it send follow-up messages automatically?</summary><p>No automatic messaging should be promised. The system is intended to help you organize your process and prepare messages you can send yourself.</p></details>
+  <details open><summary>What is the Cleaning Business Quote Follow-Up Kit?</summary><p>It is a practical kit designed to help residential cleaning business owners organize quote follow-ups, choose their next step, and prepare messages for potential customers.</p></details>
+  <details><summary>Who is this kit for?</summary><p>It is designed for residential cleaning business owners who send quotes and want a clearer way to manage follow-ups.</p></details>
+  <details><summary>Will this guarantee more bookings?</summary><p>No. The kit can help you organize your follow-up process, but results depend on your business, your quotes, your customers, and other factors.</p></details>
+  <details><summary>Does it send follow-up messages automatically?</summary><p>No automatic messaging should be promised. The kit is intended to help you organize your process and prepare messages you can send yourself.</p></details>
   <details><summary>How much does it cost?</summary><p>The listed price is $19.</p></details>
   <details><summary>How do I get the product after purchasing?</summary><p>You buy through the Gumroad checkout linked on this page. After you pay, Gumroad gives you access to the product files and emails you a receipt.</p></details>
   <details><summary>Do I need special software?</summary><p>The quote tracker is a spreadsheet. Open it in the spreadsheet app you already use. No special software is required.</p></details>
@@ -262,17 +265,17 @@ footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:
   <h2>Give Your Quote Follow-Ups a Clear Next Step</h2>
   <p class="mute lede">Keep your quotes organized, follow a simple process, and have a message ready when it is time to check in.</p>
   <div class="final-price">$19</div>
-  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up System — $19</span></a>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up Kit — $19</span></a>
   <p class="btn-note">One-time payment. Digital product.</p>
   </div>
 </section>
 </main>
 
-<footer>© Bondly Club — Cleaning Business Quote Follow-Up System</footer>
+<footer>© Bondly Club — Cleaning Business Quote Follow-Up Kit</footer>
 
 <div class="bar">
   <div class="bar-price">$19 one time</div>
-  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the System</span></a>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Kit</span></a>
 </div>
 
 </body>
