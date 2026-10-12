@@ -11,90 +11,155 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d1d1f'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>B</text></svg>">
 <style>
 :root{
-  --bg:#ffffff; --card:#ffffff; --ink:#1d1d1f; --mute:#707070;
+  --bg:#FFFFFF; --band:#F5F5F7; --ink:#1D1D1F; --mute:#515154;
   --teal:#1d1d1f; --teal-dark:#000000; --teal-light:#f5f5f7;
-  --line:#d6d6d6;
+  --line:#D2D2D7; --accent:#0071E3; --focus:#0071E3;
+  --dark:#1D1D1F; --dark-mute:#A7A7AB;
   --radius:20px;
   --shadow-sm:none;
-  --max:720px;
+  --max:960px;
+  --sec-pad:clamp(48px,7vw,80px);
+  --bar-h:72px;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--font);padding-bottom:76px;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font);padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media(min-width:700px){body{font-size:17px}}
 h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-0.02em}
-h1{font-size:clamp(34px,6vw,46px);font-weight:800}
-h2{font-size:clamp(24px,4.6vw,30px);font-weight:700;margin-bottom:12px}
-h3{font-size:18px;font-weight:700}
+h1{font-size:clamp(36px,30px + 3vw,54px);font-weight:800}
+h2{font-size:clamp(24px,20px + 1.4vw,30px);font-weight:700;margin:0 0 14px}
+h3{font-size:clamp(17px,16px + .5vw,19px);font-weight:700}
 p{margin:0 0 12px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-section{padding:56px 0}
+@media(min-width:700px){.wrap{padding:0 24px}}
+@media(min-width:1024px){.wrap{padding:0 32px}}
+section{padding:var(--sec-pad) 0}
+section[id],div[id]{scroll-margin-top:76px}
 .mute{color:var(--mute)}
-:focus-visible{outline:3px solid #0066cc;outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
-.hdr-in{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{font-weight:700;font-size:19px;color:var(--ink);letter-spacing:-0.01em}
+.hdr{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid var(--line)}
+.hdr-in{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+@media(min-width:700px){.hdr-in{padding:12px 24px}}
+@media(min-width:1024px){.hdr-in{padding:12px 32px}}
+.brand{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-0.01em;white-space:nowrap}
+.hdr-nav{display:none;gap:26px;margin-left:auto;margin-right:26px}
+.hdr-nav a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;padding:4px 0}
+.hdr-nav a:hover{color:var(--accent)}
+@media(min-width:700px){.hdr-nav{display:flex}}
 
 /* hero */
-.hero{padding-top:56px;text-align:left}
-.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--ink);background:var(--teal-light);padding:6px 14px;border-radius:999px;margin-bottom:20px}
-.hero h1{margin-bottom:16px}
-.hero .sub{font-size:18px;line-height:1.55;color:var(--mute);max-width:560px}
-.btn,.hdr-cta{--btn-r:9999px;--btn-face:#1d1d1f;--btn-edge:#000000;--btn-ink:#ffffff;display:block;background:var(--btn-edge);border:0;border-radius:var(--btn-r);padding:0;text-align:center;text-decoration:none;cursor:pointer}
-.btn .button_top,.hdr-cta .button_top{display:block;box-sizing:border-box;background:var(--btn-face);color:var(--btn-ink);border:2px solid var(--btn-edge);border-radius:var(--btn-r);padding:.78em 1.4em;font:700 18px var(--font);transform:translateY(-.22em);transition:transform .12s ease}
-.btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.34em)}
+.hero{padding:clamp(44px,6vw,72px) 0 clamp(44px,5vw,64px);text-align:left}
+.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;line-height:1.5;color:var(--mute);margin-bottom:16px}
+.hero h1{margin-bottom:20px;max-width:12em}
+.hero h1 br{display:none}
+@media(min-width:700px){.hero h1 br{display:block}}
+.hero .lead{font-size:18px;line-height:1.55;color:var(--ink);max-width:34em}
+.hero .sub{font-size:16.5px;line-height:1.6;color:var(--mute);max-width:36em}
+@media(min-width:700px){.hero .sub{font-size:17px}}
+.hero .sub:last-of-type{margin-bottom:0}
+.hero .btn{margin-top:26px;width:100%}
+@media(min-width:700px){.hero .btn{width:auto;max-width:360px}}
+.btn,.hdr-cta{--btn-r:9999px;--btn-face:#1d1d1f;--btn-edge:#000000;--btn-ink:#ffffff;display:block;background:var(--btn-edge);border:0;border-radius:var(--btn-r);padding:0;text-align:center;text-decoration:none;cursor:pointer;max-width:100%}
+.btn .button_top,.hdr-cta .button_top{display:block;box-sizing:border-box;background:var(--btn-face);color:var(--btn-ink);border:2px solid var(--btn-edge);border-radius:var(--btn-r);padding:.78em 1.4em;font:700 17px/1.4 var(--font);transform:translateY(-.22em);transition:transform .12s ease;white-space:normal}
+.btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.3em)}
 .btn:active .button_top,.hdr-cta:active .button_top{transform:translateY(0)}
-.btn:focus-visible,.hdr-cta:focus-visible{outline:3px solid #0066cc;outline-offset:4px}
-.hdr-cta{width:auto}
-.hdr-cta .button_top{padding:.5em 1.25em;font-size:15px;--btn-r:10px}
+.btn:focus-visible,.hdr-cta:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.hdr-cta{width:auto;flex-shrink:0}
+.hdr-cta .button_top{padding:.5em 1.2em;font-size:14px}
 .bar .btn{width:auto;flex:1;max-width:440px}
 .bar .btn .button_top{padding:.68em 1.2em;font-size:16px}
 @media(prefers-reduced-motion:reduce){.btn .button_top,.hdr-cta .button_top{transition:none}.btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.22em)}.btn:active .button_top,.hdr-cta:active .button_top{transform:translateY(-.22em)}}
-.btn-note{text-align:center;font-size:14px;color:var(--mute);margin-top:10px}
+.btn-note{font-size:13px;line-height:1.5;color:var(--mute);margin-top:10px}
+@media(min-width:700px){.btn-note{font-size:14px}}
+.hero .btn-note{text-align:left}
+@media(min-width:700px){.hero .btn-note{max-width:360px;text-align:center}}
 
 /* lists */
-.ticks{list-style:none;padding:0;margin:16px 0 0}
-.ticks li{position:relative;padding:10px 0 10px 38px;font-size:16.5px;border-bottom:1px solid var(--line)}
-.ticks li:last-child{border-bottom:0}
-.ticks li::before{content:"✓";position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
-.alt{background:var(--teal-light)}
+.alt{background:var(--band)}
 
-/* cards */
-.grid{display:grid;gap:16px;margin-top:20px;grid-template-columns:1fr}
-@media(min-width:640px){.grid.cols2{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
-.alt .card{background:var(--card)}
-.card h3{margin-bottom:6px}
-.card p{margin:0;color:var(--mute);font-size:15.5px}
-.card .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;margin-bottom:10px}
+/* editorial rows (outcomes): stacked mobile, 3 balanced columns desktop */
+.edrows{margin:32px 0 0;border-top:1px solid var(--line)}
+.edrow{display:grid;grid-template-columns:1fr;gap:6px;padding:24px 0;border-bottom:1px solid var(--line)}
+.edrow .n{font-size:13px;font-weight:800;color:var(--mute);letter-spacing:.6px}
+.edrow h3{font-size:clamp(18px,17px + .4vw,19px);line-height:1.35}
+.edrow p{margin:6px 0 0;color:var(--mute);font-size:16px;line-height:1.6}
+@media(min-width:900px){
+  .edrows{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 32px;border-top:0;margin-top:36px}
+  .edrow{display:block;border-bottom:0;border-left:1px solid var(--line);padding:0 0 0 28px}
+  .edrow:first-child{border-left:0;padding-left:0}
+  .edrow .n{display:block;margin-bottom:12px}
+  .edrow h3{margin-bottom:8px}
+  .edrow p{margin:0}
+}
 
-/* steps */
-.steps{list-style:none;padding:0;margin:16px 0 0;counter-reset:s}
-.steps li{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 66px;margin-bottom:12px}
-.steps li::before{content:counter(s);position:absolute;left:14px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--teal-light);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:17px}
-.steps li b{display:block;font-size:17px;margin-bottom:2px}
-.steps li span{color:var(--mute);font-size:15.5px}
+/* product rows (components): stacked mobile, index/title/desc columns desktop */
+.prows{margin:32px 0 0;border-top:1px solid var(--line)}
+.prow{display:grid;grid-template-columns:1fr;gap:4px;padding:24px 0;border-bottom:1px solid var(--line)}
+.prow .idx{font-size:13px;font-weight:800;letter-spacing:1px;color:var(--mute)}
+.prow h3{font-size:clamp(18px,17px + .4vw,19px);margin-top:2px;line-height:1.35}
+.prow p{margin:6px 0 0;color:var(--mute);font-size:16px;line-height:1.6}
+@media(min-width:760px){.prow{grid-template-columns:56px minmax(180px,240px) 1fr;gap:0 28px;align-items:start;padding:26px 0}.prow p{margin:0}}
 
-/* offer */
-.offer{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px 24px;text-align:center}
-.offer .price{font-size:56px;font-weight:800;color:var(--ink);line-height:1.1;margin:6px 0 2px;letter-spacing:-0.02em}
-.offer .price small{font-size:20px;font-weight:700}
+/* steps: stacked mobile, horizontal trio desktop with stronger process hierarchy */
+.flow{list-style:none;padding:0;margin:32px 0 0;counter-reset:s}
+.flow li{counter-increment:s;position:relative;padding:22px 0;border-top:1px solid var(--line)}
+.flow li:last-child{border-bottom:1px solid var(--line)}
+.flow .step-n{display:block;font-size:15px;font-weight:800;color:var(--ink);letter-spacing:.6px;margin-bottom:10px}
+.flow li b{display:block;font-size:18px;margin-bottom:6px;letter-spacing:-0.01em}
+.flow li span{color:var(--mute);font-size:16px;line-height:1.6;display:block}
+.flow-note{margin-top:14px;font-size:15px}
+@media(min-width:900px){
+  .flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 32px}
+  .flow li{border-top:0;border-left:1px solid var(--line);border-bottom:0;padding:0 0 0 28px}
+  .flow li:first-child{border-left:0;padding-left:0}
+  .flow li:last-child{border-bottom:0}
+}
+
+/* fit list (audience): clean checklist, no boxes */
+.fit{list-style:none;padding:0;margin:20px 0 0}
+.fit li{position:relative;padding:9px 0 9px 30px;font-size:16.5px;line-height:1.6}
+@media(min-width:700px){.fit li{font-size:17px}}
+.fit li::before{content:"✓";position:absolute;left:2px;top:9px;color:var(--mute);font-weight:800;font-size:15px}
+
+/* offer: dark band */
+.dark{background:var(--dark);color:#fff}
+.dark .mute{color:var(--dark-mute)}
+.offer{background:transparent;border:0;border-radius:0;padding:4px 0;text-align:center;box-shadow:none;max-width:680px;margin:0 auto}
+.offer h2{color:#fff}
+.offer .price{font-size:clamp(48px,7vw,60px);font-weight:800;color:#fff;line-height:1.1;margin:12px 0 4px;letter-spacing:-0.02em}
+.offer .incl{list-style:none;padding:0;margin:18px auto 0;text-align:left;max-width:520px}
+.offer .incl li{position:relative;padding:8px 0 8px 32px;font-size:16px;line-height:1.55;color:#f5f5f7;border:0}
+.offer .incl li::before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;font-size:12px}
+@media(min-width:760px){.offer .incl{display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;max-width:600px}}
+.btn--light{--btn-face:#ffffff;--btn-edge:#000000;--btn-ink:#1d1d1f}
+.offer .btn{margin:20px auto 0;max-width:360px;width:100%}
+.offer .btn-note{color:var(--dark-mute)}
+.final-price{font-size:40px;font-weight:800;letter-spacing:-0.02em;margin:10px 0 2px}
+.final-center{max-width:620px;margin:0 auto;text-align:center}
+.final-center .lede{max-width:38em;margin-left:auto;margin-right:auto}
+.final-center .btn{margin:20px auto 0;max-width:360px;width:100%}
+.final-center .btn-note{text-align:center}
 
 /* faq */
-details{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:16px 2px;margin-bottom:0}
+.faq-list{margin-top:26px}
+details{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 2px;margin-bottom:0}
 details:first-of-type{border-top:1px solid var(--line)}
-summary{font-weight:700;cursor:pointer;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary{font-weight:700;cursor:pointer;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.45;min-height:44px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";flex-shrink:0;color:var(--mute);font-size:24px;font-weight:400;line-height:1}
-details[open] summary::after{content:"–"}
-details p{margin:10px 0 4px;color:var(--mute);font-size:15.5px}
-footer{background:var(--teal-light);text-align:center;color:var(--mute);font-size:13px;padding:32px 20px 16px}
+summary::after{content:"+";flex-shrink:0;width:24px;text-align:center;color:var(--mute);font-size:22px;font-weight:400;line-height:1}
+details[open] summary::after{content:"–";color:var(--ink)}
+details p{margin:10px 0 4px;color:var(--mute);font-size:16px;line-height:1.6}
+footer{background:#fff;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:14px;line-height:1.6;padding:28px 20px calc(20px + env(safe-area-inset-bottom,0px))}
 
-/* sticky bar */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center}
-.bar-price{font-weight:800;color:var(--teal);white-space:nowrap}
+/* sticky bar: viewport-anchored, opaque, never obscures content (body reserves --bar-h) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#FFFFFF;border-top:1px solid var(--line);box-shadow:0 -1px 8px rgba(0,0,0,.06);min-height:var(--bar-h);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center}
+.bar-price{font-weight:800;color:var(--teal);white-space:nowrap;font-size:15px}
+.bar .btn{min-height:44px}
+@media(max-width:380px){.bar-price{display:none}}
+@media(max-width:340px){.bar{padding-left:10px;padding-right:10px}.bar .btn .button_top{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -103,98 +168,79 @@ footer{background:var(--teal-light);text-align:center;color:var(--mute);font-siz
 <header class="hdr">
   <div class="hdr-in">
     <div class="brand">Bondly Club</div>
+    <nav class="hdr-nav" aria-label="Page sections"><a href="#top">Home</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></nav>
     <a class="hdr-cta" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the System</span></a>
   </div>
 </header>
 
 <main>
-<section class="hero wrap">
+<section class="hero wrap" id="top">
   <span class="eyebrow">FOR RESIDENTIAL CLEANING BUSINESSES</span>
-  <h1>Sending Quotes but Not Hearing Back?</h1>
-  <p class="sub">You send a quote, get busy with work, and wait for a reply. Some customers respond. Others go quiet.</p>
+  <h1>Sending Quotes but<br> Not Hearing Back?</h1>
+  <p class="lead">You send a quote, get busy with work, and wait for a reply. Some customers respond. Others go quiet.</p>
   <p class="sub">The Cleaning Business Quote Follow-Up System helps you keep track of your quotes, know what to do next, and have a clear message ready when it is time to follow up.</p>
   <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up System — $19</span></a>
   <p class="btn-note">One-time payment. Digital product.</p>
 </section>
 
-<section class="wrap">
-  <h2>Sending a Quote Is Only the First Step</h2>
-  <p>You send a quote. Then work gets busy.</p>
-  <ul class="ticks">
-    <li>You send a quote and are not sure when to follow up.</li>
-    <li>You mean to check in but get busy with other work.</li>
-    <li>You have quotes waiting for replies and lose track of the next step.</li>
-    <li>You are unsure what to say when you contact a customer again.</li>
-  </ul>
-  <p style="margin-top:14px">It is easy to lose track when everything lives in your head. You need a simple way to keep your next steps clear.</p>
-</section>
-
 <section class="alt"><div class="wrap">
-  <h2>A Simple Way to Follow Up</h2>
-  <p>The Cleaning Business Quote Follow-Up System gives you tools to manage the next steps after sending a quote.</p>
-  <p>Use it to keep your follow-ups in order, choose your next action, and save time when writing messages.</p>
-  <p class="mute" style="font-size:15px">Note: you send your own messages. The system organizes the work. It does not contact customers for you.</p>
+  <h2>Getting Quotes Under Control</h2>
+  <div class="edrows">
+    <div class="edrow"><span class="n">01</span><h3>Know Which Quotes Need Attention</h3><p>Keep your quotes organized so you can see which ones may need a follow-up.</p></div>
+    <div class="edrow"><span class="n">02</span><h3>Know What to Do Next</h3><p>Use a simple guide to help you decide on your next follow-up step.</p></div>
+    <div class="edrow"><span class="n">03</span><h3>Know What to Say</h3><p>Use ready-to-adapt follow-up messages instead of starting from a blank page.</p></div>
+  </div>
 </div></section>
 
 <section class="wrap">
-  <h2>Get Three Things Under Control</h2>
-  <div class="grid cols2">
-    <div class="card"><h3>Know Which Quotes Need Attention</h3><p>Keep your quotes organized so you can see which ones may need a follow-up.</p></div>
-    <div class="card"><h3>Know What to Do Next</h3><p>Use a simple guide to help you decide on your next follow-up step.</p></div>
-    <div class="card"><h3>Know What to Say</h3><p>Use ready-to-adapt follow-up messages instead of starting from a blank page.</p></div>
+  <h2>The Complete Follow-Up System</h2>
+  <div class="prows">
+    <div class="prow"><span class="idx">01</span><h3>Quote Follow-Up Message Kit</h3><p>Ready-to-adapt messages to help you follow up with potential customers after sending a quote.</p></div>
+    <div class="prow"><span class="idx">02</span><h3>Follow-Up Action Guide</h3><p>A simple guide to help you work out your next step when a customer has not replied.</p></div>
+    <div class="prow"><span class="idx">03</span><h3>Quote Follow-Up Tracker</h3><p>A way to organize your quotes and keep track of follow-up activity.</p></div>
+    <div class="prow"><span class="idx">04</span><h3>Five-Quote Quick Start</h3><p>A small starting process to help you begin using the system with five quotes.</p></div>
   </div>
 </section>
 
-<section class="wrap">
-  <h2>Everything You Need to Get Started</h2>
-  <div class="grid cols2">
-    <div class="card"><h3>Quote Follow-Up Message Kit</h3><p>Ready-to-adapt messages to help you follow up with potential customers after sending a quote.</p></div>
-    <div class="card"><h3>Follow-Up Action Guide</h3><p>A simple guide to help you work out your next step when a customer has not replied.</p></div>
-    <div class="card"><h3>Quote Follow-Up Tracker</h3><p>A way to organize your quotes and keep track of follow-up activity.</p></div>
-    <div class="card"><h3>Five-Quote Quick Start</h3><p>A small starting process to help you begin using the system with five quotes.</p></div>
-  </div>
-</section>
-
-<section class="alt"><div class="wrap">
+<section class="alt"><div class="wrap" id="how">
   <h2>Start in Three Simple Steps</h2>
-  <ol class="steps">
-    <li><b>Add Your Quotes</b><span>Start with the quotes you want to follow up on.</span></li>
-    <li><b>Choose Your Next Step</b><span>Use the guide and tracker to organize your follow-up.</span></li>
-    <li><b>Send Your Message</b><span>Adapt a message from the kit and contact the customer when appropriate.</span></li>
+  <ol class="flow">
+    <li><span class="step-n">01</span><b>Add Your Quotes</b><span>Start with the quotes you want to follow up on.</span></li>
+    <li><span class="step-n">02</span><b>Choose Your Next Step</b><span>Use the guide and tracker to organize your follow-up.</span></li>
+    <li><span class="step-n">03</span><b>Send Your Message</b><span>Adapt a message from the kit and contact the customer when appropriate.</span></li>
   </ol>
-  <p class="mute" style="margin-top:12px">Start with five quotes. Learn the process as you go.</p>
+  <p class="mute flow-note">Start with five quotes. Learn the process as you go.</p>
 </div></section>
 
 <section class="wrap">
   <h2>Made for Busy Cleaning Business Owners</h2>
-  <p>This system is for residential cleaning business owners who send quotes to potential customers and want a more organized way to follow up.</p>
-  <p>It may be a good fit if you want:</p>
-  <ul class="ticks">
-    <li>A clearer process after sending a quote.</li>
+  <ul class="fit">
+    <li>A cleaner process after sending a quote.</li>
     <li>A way to keep track of quotes that need attention.</li>
     <li>Follow-up messages you can adapt to your business.</li>
   </ul>
-  <p class="mute" style="margin-top:12px;font-size:15px">It is not a promise of more sales or guaranteed bookings.</p>
 </section>
 
-<section class="wrap">
+<section class="dark"><div class="wrap">
   <div class="offer">
     <h2>Get Your Quote Follow-Up System</h2>
     <p class="mute">Get the tools to organize your quote follow-ups, choose your next step, and prepare your messages.</p>
     <div class="price">$19</div>
-    <ul class="ticks" style="text-align:left">
+    <ul class="incl">
       <li>Quote Follow-Up Message Kit</li>
       <li>Follow-Up Action Guide</li>
       <li>Quote Follow-Up Tracker</li>
       <li>Five-Quote Quick Start</li>
     </ul>
-    <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true" style="margin-top:16px"><span class="button_top">Get the System — $19</span></a>
-    <p class="btn-note">One-time payment. No recurring product fee is advertised.</p>
+    <a class="btn btn--light" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the System — $19</span></a>
+    <p class="btn-note">One-time payment. No recurring products or subscriptions.</p>
   </div>
+</div>
 </section>
 
-<section class="alt"><div class="wrap">
+<section class="alt"><div class="wrap" id="faq">
   <h2>Common Questions</h2>
+  <div class="faq-list">
   <details open><summary>What is the Cleaning Business Quote Follow-Up System?</summary><p>It is a set of tools designed to help residential cleaning business owners organize quote follow-ups, choose their next step, and prepare messages for potential customers.</p></details>
   <details><summary>Who is this system for?</summary><p>It is designed for residential cleaning business owners who send quotes and want a clearer way to manage follow-ups.</p></details>
   <details><summary>Will this guarantee more bookings?</summary><p>No. The system can help you organize your follow-up process, but results depend on your business, your quotes, your customers, and other factors.</p></details>
@@ -202,13 +248,17 @@ footer{background:var(--teal-light);text-align:center;color:var(--mute);font-siz
   <details><summary>How much does it cost?</summary><p>The listed price is $19.</p></details>
   <details><summary>How do I get the product after purchasing?</summary><p>You buy through the Gumroad checkout linked on this page. After you pay, Gumroad gives you access to the product files and emails you a receipt.</p></details>
   <details><summary>Do I need special software?</summary><p>The quote tracker is a spreadsheet. Open it in the spreadsheet app you already use. No special software is required.</p></details>
+  </div>
 </div></section>
 
-<section class="wrap" style="text-align:center">
+<section class="wrap">
+  <div class="final-center">
   <h2>Give Your Quote Follow-Ups a Clear Next Step</h2>
-  <p class="mute">Keep your quotes organized, follow a simple process, and have a message ready when it is time to check in.</p>
-  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true" style="margin-top:12px"><span class="button_top">Get the Follow-Up System — $19</span></a>
+  <p class="mute lede">Keep your quotes organized, follow a simple process, and have a message ready when it is time to check in.</p>
+  <div class="final-price">$19</div>
+  <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up System — $19</span></a>
   <p class="btn-note">One-time payment. Digital product.</p>
+  </div>
 </section>
 </main>
 
