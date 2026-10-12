@@ -50,18 +50,24 @@ section[id],div[id]{scroll-margin-top:76px}
 .hdr-nav a:hover{color:var(--accent)}
 @media(min-width:700px){.hdr-nav{display:flex}}
 
-/* hero */
-.hero{padding:clamp(44px,6vw,72px) 0 clamp(44px,5vw,64px);text-align:left}
-.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;line-height:1.5;color:var(--mute);margin-bottom:16px}
-.hero h1{margin-bottom:20px;max-width:12em}
+/* hero: mobile-first comfortable composition; desktop restored at 768px+ */
+.hero{padding-top:36px;padding-bottom:40px;text-align:left}
+.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;line-height:1.5;color:var(--mute);margin-bottom:14px}
+.hero h1{font-size:clamp(32px,8.5vw,38px);line-height:1.12;letter-spacing:-0.035em;max-width:100%;margin:0 0 18px;text-wrap:balance}
 .hero h1 br{display:none}
 @media(min-width:700px){.hero h1 br{display:block}}
-.hero .lead{font-size:18px;line-height:1.55;color:var(--ink);max-width:34em}
-.hero .sub{font-size:16.5px;line-height:1.6;color:var(--mute);max-width:36em}
+.hero .lead{font-size:17px;line-height:1.6;color:var(--ink);max-width:34em;margin:0 0 14px}
+.hero .sub{font-size:16px;line-height:1.6;color:var(--mute);max-width:36em}
 @media(min-width:700px){.hero .sub{font-size:17px}}
 .hero .sub:last-of-type{margin-bottom:0}
-.hero .btn{margin-top:26px;width:100%}
+.hero .btn{margin-top:24px;width:100%}
 @media(min-width:700px){.hero .btn{width:auto;max-width:360px}}
+@media(min-width:768px){
+  .hero{padding-top:clamp(44px,6vw,72px);padding-bottom:clamp(44px,5vw,64px)}
+  .eyebrow{margin-bottom:16px}
+  .hero h1{font-size:clamp(48px,30px + 3vw,54px);line-height:1.15;letter-spacing:-0.02em;max-width:12em;margin-bottom:20px}
+  .hero .lead{font-size:18px;line-height:1.55}
+}
 .btn,.hdr-cta{--btn-r:9999px;--btn-face:#1d1d1f;--btn-edge:#000000;--btn-ink:#ffffff;display:block;background:var(--btn-edge);border:0;border-radius:var(--btn-r);padding:0;text-align:center;text-decoration:none;cursor:pointer;max-width:100%}
 .btn .button_top,.hdr-cta .button_top{display:block;box-sizing:border-box;background:var(--btn-face);color:var(--btn-ink);border:2px solid var(--btn-edge);border-radius:var(--btn-r);padding:.78em 1.4em;font:700 17px/1.4 var(--font);transform:translateY(-.22em);transition:transform .12s ease;white-space:normal}
 .btn:hover .button_top,.hdr-cta:hover .button_top{transform:translateY(-.3em)}
