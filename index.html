@@ -86,6 +86,28 @@ section[id],div[id]{scroll-margin-top:76px}
 .hero .btn-note{text-align:left}
 @media(min-width:700px){.hero .btn-note{max-width:360px;text-align:center}}
 
+/* imagery: calm editorial figures shared across sections */
+.media{margin:0}
+.media img{display:block;width:100%;height:auto;border-radius:var(--radius-l);border:1px solid var(--line)}
+.media-cover img{aspect-ratio:4/3;object-fit:cover}
+.media-on-dark img{border-color:rgba(250,245,232,.28)}
+.split{display:grid;gap:28px;margin-top:32px;align-items:center}
+.split .edrows,.split .flow{margin-top:0}
+@media(min-width:900px){
+  .split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+  .split .edrows{display:block;border-top:1px solid var(--line)}
+  .split .edrow{display:grid;border-left:0;padding-left:0}
+  .split .flow{display:block}
+  .split .flow li{border-top:0;border-left:0;padding-left:0;border-bottom:1px solid var(--line)}
+  .split .flow li:first-child{border-top:1px solid var(--line)}
+  .kit-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .kit-grid .prows{margin-top:0}
+  .kit-grid .prow{grid-template-columns:48px minmax(0,1fr)}
+  .kit-grid .prow p{grid-column:1/-1;margin-top:6px}
+}
+.hero-grid{display:grid;gap:28px}
+@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}}
+
 /* lists */
 .alt{background:var(--neutral)}
 
@@ -184,53 +206,76 @@ footer{background:var(--surface);border-top:1px solid var(--line);text-align:cen
 
 <main>
 <section class="hero wrap" id="top">
+  <div class="hero-grid">
+  <div class="hero-copy">
   <span class="eyebrow">FOR RESIDENTIAL CLEANING BUSINESSES</span>
   <h1>Every quote deserves<br> a follow-up.</h1>
   <p class="lead">You send a quote, get busy with work, and wait for a reply. Some customers respond. Others go quiet.</p>
   <p class="sub">Keep track of open cleaning quotes, plan your next follow-up, and organize customer replies with a practical follow-up kit.</p>
   <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Follow-Up Kit — $19</span></a>
   <p class="btn-note">One-time payment. Digital product.</p>
+  </div>
+  <figure class="media media-cover hero-media"><img src="assets/images/hero-cleaning-business-owner.webp" width="1280" height="853" alt="Cleaning business owner reviewing quotes on a laptop at a bright kitchen workspace" fetchpriority="high"></figure>
+  </div>
 </section>
 
 <section class="alt"><div class="wrap">
   <h2>Getting Quotes Under Control</h2>
+  <div class="split">
+  <figure class="media media-cover"><img src="assets/images/quote-organization.webp" width="1280" height="1024" alt="Hand writing a follow-up checklist — review quote, follow up, next step — beside a laptop" loading="lazy"></figure>
   <div class="edrows">
     <div class="edrow"><span class="n">01</span><h3>Know Which Quotes Need Attention</h3><p>Keep your quotes organized so you can see which ones may need a follow-up.</p></div>
     <div class="edrow"><span class="n">02</span><h3>Know What to Do Next</h3><p>Use a simple guide to help you decide on your next follow-up step.</p></div>
     <div class="edrow"><span class="n">03</span><h3>Know What to Say</h3><p>Use ready-to-adapt follow-up messages instead of starting from a blank page.</p></div>
   </div>
+  </div>
 </div></section>
 
 <section class="wrap">
   <h2>The Complete Follow-Up Kit</h2>
+  <div class="split kit-grid">
+  <figure class="media media-cover"><img src="assets/images/follow-up-kit-mockup.webp" width="1280" height="960" alt="Printed follow-up kit materials: message kit booklet, action guide, quick start, checklist, and quote tracker" loading="lazy"></figure>
   <div class="prows">
     <div class="prow"><span class="idx">01</span><h3>Quote Follow-Up Message Kit</h3><p>Ready-to-adapt messages to help you follow up with potential customers after sending a quote.</p></div>
     <div class="prow"><span class="idx">02</span><h3>Follow-Up Action Guide</h3><p>A simple guide to help you work out your next step when a customer has not replied.</p></div>
     <div class="prow"><span class="idx">03</span><h3>Quote Follow-Up Tracker</h3><p>A way to organize your quotes and keep track of follow-up activity.</p></div>
     <div class="prow"><span class="idx">04</span><h3>Five-Quote Quick Start</h3><p>A small starting process to help you begin using the system with five quotes.</p></div>
   </div>
+  </div>
 </section>
 
 <section class="alt"><div class="wrap" id="how">
   <h2>Start in Three Simple Steps</h2>
+  <div class="split">
+  <figure class="media media-cover"><img src="assets/images/follow-up-message.webp" width="1280" height="1024" alt="Hand holding a phone with a drafted customer follow-up message beside a notebook" loading="lazy"></figure>
+  <div>
   <ol class="flow">
     <li><span class="step-n">01</span><b>Add Your Quotes</b><span>Start with the quotes you want to follow up on.</span></li>
     <li><span class="step-n">02</span><b>Choose Your Next Step</b><span>Use the guide and tracker to organize your follow-up.</span></li>
     <li><span class="step-n">03</span><b>Send Your Message</b><span>Adapt a message from the kit and contact the customer when appropriate.</span></li>
   </ol>
   <p class="mute flow-note">Start with five quotes. Learn the process as you go.</p>
+  </div>
+  </div>
 </div></section>
 
 <section class="wrap">
   <h2>Made for Busy Cleaning Business Owners</h2>
+  <div class="split">
+  <div>
   <ul class="fit">
     <li>A cleaner process after sending a quote.</li>
     <li>A way to keep track of quotes that need attention.</li>
     <li>Follow-up messages you can adapt to your business.</li>
   </ul>
+  </div>
+  <figure class="media media-cover"><img src="assets/images/cleaning-business-owner-door.webp" width="1280" height="960" alt="Cleaning business owner carrying supplies to a client's front door" loading="lazy"></figure>
+  </div>
 </section>
 
 <section class="dark"><div class="wrap">
+  <div class="split">
+  <figure class="media media-cover media-on-dark"><img src="assets/images/quote-kit-pricing.webp" width="1280" height="960" alt="Printed quote follow-up kit pages and tracker spreadsheet arranged on a desk" loading="lazy"></figure>
   <div class="offer">
     <h2>Get Your Quote Follow-Up Kit</h2>
     <p class="mute">Get the tools to organize your quote follow-ups, choose your next step, and prepare your messages.</p>
@@ -243,6 +288,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);text-align:cen
     </ul>
     <a class="btn" href="https://jomaawork.gumroad.com/l/cleaning-quote-follow-up-system?wanted=true"><span class="button_top">Get the Kit — $19</span></a>
     <p class="btn-note">One-time payment. No recurring products or subscriptions.</p>
+  </div>
   </div>
 </div>
 </section>
