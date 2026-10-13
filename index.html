@@ -121,6 +121,23 @@ section{padding:40px 0}
 .wa small{display:block;font-size:13px;font-weight:600;opacity:.92}
 .payhint{font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
 
+/* added imagery (conversion assets) */
+.fig{margin:0}
+.fig img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#fff}
+.split{display:grid;gap:18px;align-items:center}
+@media(min-width:860px){.split{grid-template-columns:1fr 1fr;gap:24px}}
+.hero-grid{display:grid;gap:20px;align-items:center}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:28px}.hero-grid .hero-text{text-align:right}}
+.hero-cover{width:100%;max-width:340px;margin-inline:auto}
+@media(min-width:860px){.hero-cover{max-width:420px}}
+.hero-cover img{object-fit:contain;max-height:440px}
+.life-cover img{aspect-ratio:4/3;object-fit:cover}
+.steps-fig{max-width:640px;margin:16px auto 4px}
+.tool-grid{display:grid;gap:14px;margin-top:16px;grid-template-columns:1fr}
+@media(min-width:700px){.tool-grid{grid-template-columns:1fr 1fr 1fr}}
+.tool-grid img{aspect-ratio:4/3;object-fit:cover}
+.offer-fig{max-width:520px;margin:0 auto 18px}
+
 /* faq */
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
 summary{font-weight:800;cursor:pointer;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
@@ -175,6 +192,8 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </div>
 
 <header class="hero w">
+  <div class="hero-grid">
+  <div class="hero-text">
   <p class="pname">نظام المذاكرة اللي يخلّيك تتقدم</p>
   <span class="badge">لطلاب الثانوية العامة</span>
   <h1>بتذاكر، بس مش حاسس إنك بتتقدم؟</h1>
@@ -184,6 +203,9 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   <a class="btn" href="#pay">عايز أبدأ أذاكر بنظام</a>
   <p class="under-cta">الدفع بالمحافظ الإلكترونية أو InstaPay • الاستلام على واتساب</p>
   <a class="secondary" href="#preview">بص جوه الخطة ↓</a>
+  </div>
+  <figure class="fig hero-cover"><img src="study-system-cover.webp" width="1024" height="1280" alt="غلاف نظام المذاكرة اللي يخلّيك تتقدم لطلاب الثانوية العامة — 27 صفحة عملية" fetchpriority="high"></figure>
+  </div>
 </header>
 
 <section class="w reveal">
@@ -191,6 +213,8 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   <p class="mute">يمكن بتقعد بالساعات قدام الكتب، وبتحاول تخلّص اللي عليك، لكن لما تيجي تراجع تلاقي حاجات نسيتها، وأسئلة بتغلط فيها أكتر من مرة، ومش عارف إذا كانت مذاكرتك فعلًا بتجيب نتيجة ولا لأ.</p>
   <p class="mute">ويمكن تعمل جدول بحماس، وبعد كام يوم تلاقي نفسك رجعت للعشوائية تاني.</p>
   <p>المشكلة مش بالضرورة إنك مش بتبذل مجهود. أحيانًا أنت محتاج طريقة أوضح تنظّم بيها شغلك وتعرف إيه اللي محتاج اهتمام.</p>
+  <div class="split">
+  <div>
   <ul class="chk x">
     <li>مش عارف تبدأ بإيه كل يوم.</li>
     <li>بتنسى أجزاء من اللي ذاكرتها.</li>
@@ -199,6 +223,9 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
     <li>مش عارف إيه اللي محتاج مراجعة فعلًا.</li>
     <li>بتحس إنك مشغول، لكن مش شايف تقدم واضح.</li>
   </ul>
+  </div>
+  <figure class="fig life-cover"><img src="student-studying.webp" width="1280" height="960" alt="طالب ثانوية عامة يذاكر بهدوء على مكتبه" loading="lazy"></figure>
+  </div>
 </section>
 
 <section class="w reveal">
@@ -212,6 +239,7 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 <section class="w reveal" id="system">
   <h2>بدل العشوائية، امشِ على خطوات واضحة</h2>
   <p class="mute">مش شوية ورق متفرق. ده نظام واحد: كل خطوة بتسلّم للي بعدها.</p>
+  <figure class="fig steps-fig"><img src="study-system-steps.webp" width="1280" height="720" alt="رسم يوضح خطوات النظام الست: التقييم والتخطيط والتركيز والأخطاء والمراجعة والمتابعة" loading="lazy"></figure>
   <ol class="steps">
     <li><b>01 — اعرف موقفك</b><span>قيّم موادك وحدد موقفك الحالي قبل ما تبني خطتك.</span></li>
     <li><b>02 — ابنِ خطتك</b><span>نظّم المطلوب منك في خطة يومية وأسبوعية تقدر ترجع لها.</span></li>
@@ -233,6 +261,11 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
     <div class="pv-card"><a href="preview-4-smart-review.jpeg" target="_blank" rel="noopener"><img src="preview-4-smart-review.jpeg" alt="صفحة المراجعة الذكية: جدول مواعيد المراجعة لكل موضوع" width="1055" height="1491" loading="lazy"></a><p class="pv-cap"><b>المراجعة الذكية</b><span>نظم مراجعتك بدل ما تعتمد على إنك تفتكر لوحدك.</span></p></div>
   </div>
   <p class="mute" style="margin-top:12px;font-size:14.5px">دوس على أي صفحة عشان تشوفها بحجمها الكامل.</p>
+  <div class="tool-grid">
+    <figure class="fig"><img src="weekly-planner.webp" width="1280" height="960" alt="مثال لتنظيم الخطة الأسبوعية وقائمة المهام" loading="lazy"></figure>
+    <figure class="fig"><img src="mistake-log.webp" width="1280" height="960" alt="مثال لصفحة سجل الأخطاء وتحليل سبب الغلطة" loading="lazy"></figure>
+    <figure class="fig"><img src="smart-revision.webp" width="1280" height="960" alt="مثال لجدول المراجعة وتوزيع المواد على الأيام" loading="lazy"></figure>
+  </div>
 </section>
 
 <section class="reviews-sec reveal"><div class="w">
@@ -247,6 +280,7 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
 </div></section>
 
 <section class="w reveal">
+  <figure class="fig offer-fig"><img src="digital-product-preview.webp" width="1280" height="960" alt="غلاف النظام مع مثال لصفحات الجدول الأسبوعي والمراجعة بالعربية" loading="lazy"></figure>
   <div class="offer">
     <h2>ابدأ تنظّم مذاكرتك بنظام واضح</h2>
     <p class="mute">لو محتاج طريقة تساعدك تخطط، وتتابع أخطاءك، وتنظّم مراجعتك، فالنظام ده معمول عشان يوفرلك أدوات عملية تستخدمها في مذاكرتك.</p>
