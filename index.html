@@ -125,6 +125,20 @@ section{padding:40px 0}
 .wa:hover{filter:brightness(.93)}
 .wa:active{filter:brightness(.85)}
 .wa small{display:block;font-size:13px;font-weight:600;opacity:.92}
+/* animated send-message treatment for the WhatsApp CTAs only */
+.btn.wa{position:relative;overflow:hidden;background:#FFFFFF;color:var(--ink);border:1.5px solid rgba(0,0,0,.16);border-radius:14px;min-width:min(200px,100%);min-height:56px;display:flex;align-items:center;justify-content:center;padding:12px 20px;box-shadow:0 12px 28px rgba(0,0,0,.10),0 2px 0 rgba(0,0,0,.06)}
+@media(min-width:768px){.btn.wa{min-height:68px}}
+.btn.wa:hover{filter:none;box-shadow:0 14px 30px rgba(0,0,0,.12),0 2px 0 rgba(0,0,0,.06)}
+.btn.wa:active{filter:brightness(.96)}
+.btn.wa::after{content:"";position:absolute;inset:5px;border:2px solid var(--teal);border-radius:9px;opacity:0;transform:scale(.96);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.btn.wa:hover::after,.btn.wa:focus-visible::after{opacity:1;transform:none}
+.wa-face{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 17px/1.5 Cairo,sans-serif;transition:opacity .25s ease,transform .25s ease}
+.wa-face svg{flex-shrink:0}
+.wa-face-done{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;opacity:0;transform:translateY(8px);pointer-events:none;font:800 16px/1.5 Cairo,sans-serif;color:var(--ink)}
+.btn.wa.is-open .wa-face-default{opacity:0;transform:translateY(-8px)}
+.btn.wa.is-open .wa-face-done{opacity:1;transform:none}
+.flip-rtl{transform:scaleX(-1)}
+@media(prefers-reduced-motion:reduce){.btn.wa::after,.wa-face{transition:none}}
 .payhint{font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:2px;padding:10px 14px}
 
 /* added imagery (conversion assets) */
@@ -330,11 +344,11 @@ src="https://www.facebook.com/tr?id=1783713612490810&ev=PageView&noscript=1"
   <div class="box">
     <h3>💬 إرسال إثبات التحويل والاستفسارات</h3>
     <div class="mute" style="font-size:15px;margin-top:6px">رقم واتساب: <b dir="ltr">+20 150 045 5750</b></div>
-    <a class="btn wa" id="wa2" href="#" target="_blank" rel="noopener" style="margin-top:10px">ابعت صورة التحويل على واتساب</a>
+    <a class="btn wa" id="wa2" href="#" target="_blank" rel="noopener" style="margin-top:10px"><span class="wa-face wa-face-default"><svg class="flip-rtl" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 3 10.5 13.5" stroke="#0064FF" stroke-width="2" stroke-linecap="round"/><path d="M21 3l-7.5 18-3-7.5L3 10.5 21 3Z" stroke="#0064FF" stroke-width="2" stroke-linejoin="round"/></svg><span>ابعت صورة التحويل على واتساب</span></span><span class="wa-face wa-face-done" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1faa55" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5" stroke="#1faa55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>جارٍ فتح واتساب…</span></span></a>
     <div class="mute" style="font-size:14px;margin-top:10px">بعد التحويل، ابعت صورة إثبات الدفع على واتساب. هنتأكد من الدفع، وبعدها هنبعتلك ملف PDF.</div>
   </div>
 
-  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">📩 ابعت صورة التحويل على واتساب</a>
+  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener"><span class="wa-face wa-face-default"><svg class="flip-rtl" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 3 10.5 13.5" stroke="#0064FF" stroke-width="2" stroke-linecap="round"/><path d="M21 3l-7.5 18-3-7.5L3 10.5 21 3Z" stroke="#0064FF" stroke-width="2" stroke-linejoin="round"/></svg><span>📩 ابعت صورة التحويل على واتساب</span></span><span class="wa-face wa-face-done" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1faa55" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5" stroke="#1faa55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>جارٍ فتح واتساب…</span></span></a>
   <p class="mute" style="text-align:center;font-size:14px;margin-top:10px">هيتفتح واتساب على رقم <b dir="ltr">+20 150 045 5750</b> برسالة جاهزة.</p>
 </div></section>
 
@@ -384,6 +398,13 @@ document.querySelectorAll('a[href="#pay"]').forEach(function(a){
 document.getElementById("wa").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("wa2").addEventListener("click", function(){ tr("Lead"); });
 document.getElementById("waFloat").addEventListener("click", function(){ tr("Lead"); });
+// brief truthful "opening WhatsApp" visual state for the animated WhatsApp CTAs
+document.querySelectorAll(".btn.wa").forEach(function(a){
+  a.addEventListener("click", function(){
+    a.classList.add("is-open");
+    setTimeout(function(){ a.classList.remove("is-open"); }, 1800);
+  });
+});
 document.getElementById("ipn").addEventListener("click", function(){ tr("AddPaymentInfo"); });
 function ok(b){
   tr("AddPaymentInfo");
